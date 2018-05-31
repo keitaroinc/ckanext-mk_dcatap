@@ -1,6 +1,7 @@
 from rdflib.namespace import Namespace
 from rdflib import Literal, URIRef, BNode, RDF
 from ckanext.dcat.profiles import RDFProfile, namespaces as dcat_namespaces
+from ckanext.dcat.utils import resource_uri
 from ckan.lib.i18n import get_available_locales
 
 from ckantoolkit import config
@@ -17,7 +18,7 @@ VCARD = Namespace('http://www.w3.org/2006/vcard/ns#')
 ADMS = Namespace('http://www.w3.org/ns/adms#')
 OWL = Namespace('http://www.w3.org/2002/07/owl#')
 SPDX = Namespace('http://spdx.org/rdf/terms#')
-
+SCHEMA = Namespace('http://schema.org/')
 
 namespaces = {
     'dct': DCT,
@@ -29,6 +30,7 @@ namespaces = {
     'adms': ADMS,
     'owl': OWL,
     'spdx': SPDX,
+    "schema": SCHEMA,
 }
 
 
@@ -50,13 +52,13 @@ class MacedonianDCATAPProfile(RDFProfile):
 
             for extra in dataset_dict.get('extras', []):
                 if extra.get("key") == "related_resource":
-                    g.add((dataset_ref, DCT.relation, URIRef(extra.get("value")))
+                    g.add((dataset_ref, DCT.relation, URIRef(extra.get("value"))))
                 elif extra.get("key") == "conforms_to":
-                    g.add((dataset_ref, DCT.conformsTo, URIRef(extra.get("value")))
+                    g.add((dataset_ref, DCT.conformsTo, URIRef(extra.get("value"))))
                 elif extra.get("key") == "language":
-                    g.add((dataset_ref, DCT.language, Literal(extra.get("value")))
+                    g.add((dataset_ref, DCT.language, Literal(extra.get("value"))))
                 elif extra.get("key") == "dataset_type":
-                    g.add((dataset_ref, DCT.type, Literal(extra.get("value")))
+                    g.add((dataset_ref, DCT.type, Literal(extra.get("value"))))
             
             g.add((dataset_ref, DCT.modified, Literal(dataset_dict['metadata_modified'])))
     
