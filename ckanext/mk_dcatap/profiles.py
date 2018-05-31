@@ -1,6 +1,11 @@
 from rdflib.namespace import Namespace
-from rdflib import Literal, URIRef
+from rdflib import Literal, URIRef, BNode, RDF
 from ckanext.dcat.profiles import RDFProfile, namespaces as dcat_namespaces
+from ckan.lib.i18n import get_available_locales
+
+from ckantoolkit import config
+
+from datetime import datetime
 
 
 DCT = Namespace("http://purl.org/dc/terms/")
@@ -29,6 +34,10 @@ namespaces = {
 
 dcat_namespaces.update(namespaces)  # extend DCATs default namespaces
 
+DCAT_CATALOG_IS_PART_OF = "ckan.dcat.catalog.is_part_of"
+DCAT_CATALOG_HAS_PART = "ckan.dcat.catalog.has_part"
+DCAT_RIGHTS_STATEMENT = "ckan.dcat.rights_statement"
+
 
 class MacedonianDCATAPProfile(RDFProfile):
     
@@ -44,4 +53,33 @@ class MacedonianDCATAPProfile(RDFProfile):
         g = self.g
 
         g.add((catalog_ref, DCT.description, Literal('Data catalogue of the Government of Macedonia')))
-        print('catalog_ref -> ', catalog_ref)
+
+        agent = BNode()
+        g.add((agent, RDF.type, FOAF.Organization))
+        g.add((agent, FOAF.name, Literal('MISA')))
+        g.add((catalog_ref, DCT.publisher, agent))
+        
+        g.add((catalog_ref, DCT.title, Literal('data.gov.mk')))
+
+        # g.add((catalog_ref, FOAF.homepage, URIRef('https://opendata.gov.mk')))  # This is set to ckan.site_url
+
+        locales = get_available_locales()
+        for locale in locales:
+            g.add((catalog_ref, DCT.language, Literal(str(locale))))
+        
+        g.add((catalog_ref, DCT.license, Literal("CC0")))
+
+        g.add((catalog_ref, DCT.issued, Literal(datetime.now().strftime("d.m.Y"))))  # FIXME: Actual catalog issued date here
+
+        g.add((catalog_ref, DCAT.themeTaxonomy, Literal("http://publications.europa.eu/mdr/authority/data-theme/")))
+
+        if config.get(DCAT_CATALOG_HAS_PART, False):
+            g.add((catalog_ref, DCT.hasPart, URIRef(config.get(DCAT_CATALOG_HAS_PART))))
+        
+        if config.get(DCAT_CATALOG_IS_PART_OF, False):
+            g.add((catalog_ref, DCT.isPartOf, URIRef(config.get(DCAT_CATALOG_IS_PART_OF))))
+
+        if config.get(DCAT_RIGHTS_STATEMENT, False):
+            g.add((catalog_ref, DCT.rights, Literal(config.get(DCAT_RIGHTS_STATEMENT))))
+        
+        g.add((catalog_ref, DCT.spatial, Literal("MKD")))
