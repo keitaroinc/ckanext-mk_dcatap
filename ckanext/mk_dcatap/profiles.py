@@ -51,6 +51,14 @@ class MacedonianDCATAPProfile(RDFProfile):
             for extra in dataset_dict.get('extras', []):
                 if extra.get("key") == "related_resource":
                     g.add((dataset_ref, DCT.relation, URIRef(extra.get("value")))
+                elif extra.get("key") == "conforms_to":
+                    g.add((dataset_ref, DCT.conformsTo, URIRef(extra.get("value")))
+                elif extra.get("key") == "language":
+                    g.add((dataset_ref, DCT.language, Literal(extra.get("value")))
+                elif extra.get("key") == "dataset_type":
+                    g.add((dataset_ref, DCT.type, Literal(extra.get("value")))
+            
+            g.add((dataset_ref, DCT.modified, Literal(dataset_dict['metadata_modified'])))
     
     def graph_from_catalog(self, catalog_dict, catalog_ref):
 
