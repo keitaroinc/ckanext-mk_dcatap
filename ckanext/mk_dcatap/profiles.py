@@ -47,6 +47,10 @@ class MacedonianDCATAPProfile(RDFProfile):
     def graph_from_dataset(self, dataset_dict, dataset_ref):
 
             g = self.g
+
+            for extra in dataset_dict.get('extras', []):
+                if extra.get("key") == "related_resource":
+                    g.add((dataset_ref, DCT.relation, URIRef(extra.get("value")))
     
     def graph_from_catalog(self, catalog_dict, catalog_ref):
 
@@ -69,7 +73,7 @@ class MacedonianDCATAPProfile(RDFProfile):
         
         g.add((catalog_ref, DCT.license, Literal("CC0")))
 
-        g.add((catalog_ref, DCT.issued, Literal(datetime.now().strftime("d.m.Y"))))  # FIXME: Actual catalog issued date here
+        g.add((catalog_ref, DCT.issued, Literal(datetime.now().strftime(r"%d.%m.%Y"))))  # FIXME: Actual catalog issued date here
 
         g.add((catalog_ref, DCAT.themeTaxonomy, Literal("http://publications.europa.eu/mdr/authority/data-theme/")))
 
