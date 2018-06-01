@@ -1,6 +1,6 @@
 from rdflib.namespace import Namespace
 from rdflib import Literal, URIRef, BNode, RDF
-from ckanext.dcat.profiles import RDFProfile, namespaces as dcat_namespaces
+from ckanext.dcat.profiles import EuropeanDCATAPProfile, namespaces as dcat_namespaces
 from ckanext.dcat.utils import resource_uri
 from ckan.lib.i18n import get_available_locales
 
@@ -41,10 +41,16 @@ DCAT_CATALOG_HAS_PART = "ckan.dcat.catalog.has_part"
 DCAT_RIGHTS_STATEMENT = "ckan.dcat.rights_statement"
 
 
-class MacedonianDCATAPProfile(RDFProfile):
-    
+class MacedonianDCATAPProfile(EuropeanDCATAPProfile):
+    """
+    An RDF profile based on the DCAT-AP for data portals in Europe.
+
+    More information and specification:
+    https://joinup.ec.europa.eu/asset/dcat_application_profile
+    """
+
     def parse_dataset(self, dataset_dict, dataset_ref):
-        pass
+        super(MacedonianDCATAPProfile, self).parse_dataset(dataset_dict, dataset_ref)
     
     def graph_from_dataset(self, dataset_dict, dataset_ref):
 
@@ -68,24 +74,27 @@ class MacedonianDCATAPProfile(RDFProfile):
 
         g.add((catalog_ref, DCT.description, Literal('Data catalogue of the Government of Macedonia')))
 
-        agent = BNode()
-        g.add((agent, RDF.type, FOAF.Organization))
-        g.add((agent, FOAF.name, Literal('MISA')))
-        g.add((catalog_ref, DCT.publisher, agent))
-        
-        g.add((catalog_ref, DCT.title, Literal('data.gov.mk')))
+        publisher_details = URIRef('{}/publisher/'.format(config.get('ckan.site_url')))
+        g.add((catalog_ref, DCT.publisher, publisher_details))
 
-        # g.add((catalog_ref, FOAF.homepage, URIRef('https://opendata.gov.mk')))  # This is set to ckan.site_url
+        self.g.add((publisher_details, DCT.identifier, Literal(config.get('ckan.dcat.publisher.identifier', 'Publisher should be set in config: ckan.publisher.identifier'))))
+        self.g.add((publisher_details, FOAF.homepage, URIRef(config.get('ckan.dcat.publisher.webpage', 'https://opendata.gov.mk'))))
+        self.g.add((publisher_details, RDF.type, FOAF.Agent))
+
+        
+        g.add((catalog_ref, DCT.title, Literal(config.get('ckan.dcat.catalog.title', 'data.gov.mk'))))
 
         locales = get_available_locales()
         for locale in locales:
             g.add((catalog_ref, DCT.language, Literal(str(locale))))
         
-        g.add((catalog_ref, DCT.license, Literal("CC0")))
+        g.add((catalog_ref, DCT.license, Literal(config.get('ckan.dcat.catalog.license','CC0'))))
 
-        g.add((catalog_ref, DCT.issued, Literal(datetime.now().strftime(r"%d.%m.%Y"))))  # FIXME: Actual catalog issued date here
+        issued = config.get('ckan.dcat.catalog.issued')  # Should be string with supported datetime format
+        if issued:
+            self._add_date_triple(catalog_ref, DCT.issued, issued)
 
-        g.add((catalog_ref, DCAT.themeTaxonomy, Literal("http://publications.europa.eu/mdr/authority/data-theme/")))
+        g.add((catalog_ref, DCAT.themeTaxonomy, URIRef(config.get('ckan.dcat.theme_taxonomy_uri',"http://publications.europa.eu/mdr/authority/data-theme/"))))
 
         if config.get(DCAT_CATALOG_HAS_PART, False):
             g.add((catalog_ref, DCT.hasPart, URIRef(config.get(DCAT_CATALOG_HAS_PART))))
@@ -96,4 +105,4 @@ class MacedonianDCATAPProfile(RDFProfile):
         if config.get(DCAT_RIGHTS_STATEMENT, False):
             g.add((catalog_ref, DCT.rights, Literal(config.get(DCAT_RIGHTS_STATEMENT))))
         
-        g.add((catalog_ref, DCT.spatial, Literal("MKD")))
+        g.add((catalog_ref, DCT.spatial, Literal(config.get('ckan.dcat.spatial', "MKD"))))
