@@ -1,0 +1,361 @@
+{
+    "scheming_version": 1,
+    "dataset_type": "dataset",
+    "about": "MK-DCAT-AP v. 1.0, the Macedonian version of DCAT-AP",
+    "about_url": "https://opendata.gov.mk/about",
+    "dataset_fields": [
+      { "mk_dcatap_comment": "dct:title",
+        "field_name": "title",
+        "label": { "en": "Title",
+                   "mk": "Наслов"
+                 },
+        "preset": "title",
+        "form_placeholder": "eg. A descriptive title"
+      },
+      { "mk_dcatap_comment": "CKAN-specific field",
+        "field_name": "name",
+        "label": "URL",
+        "preset": "dataset_slug",
+        "form_placeholder": "eg. my-dataset"
+      },
+      { "mk_dcatap_comment": "dct:description",
+        "field_name": "notes",
+        "label": { 
+            "en":"Description",
+            "mk": "Опис"
+        },
+        "form_snippet": "markdown.html",
+        "form_placeholder": "eg. Some useful notes about the data"
+      },
+      { "mk_dcatap_comment": "dct:identifier",
+        "field_name": "identifier",
+        "label": {
+            "en": "Identifier",
+            "mk": "Идентификатор"
+        },
+        "form_placeholder": "A global, unique identifier."
+      },
+      { "mk_dcatap_comment": "dct:theme",
+        "field_name": "theme",
+        "label": { 
+            "en": "Theme/subject",
+            "mk": "Предмет"
+        },
+        "preset": "multiple_checkbox",
+        "choices":[
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/AGRI", "label": {"mk": "Земјоделство, шумарство, рибарство и храна", "en": "Agriculture, fisheries, forestry and food"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/ECON", "label": {"mk": "Економија и финансии", "en": "Economy and finance"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/EDUC", "label": {"mk": "Образование, култура и спорт", "en": "Education, culture and sport"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/ENER", "label": {"mk": "Енергија", "en": "Energy"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/ENVI", "label": {"mk": "Животна средина", "en": "Environment"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/GOVE", "label": {"mk": "Влада и јавен сектор", "en": "Government and public sector"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/HEAL", "label": {"mk": "Здравство", "en": "Health"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/INTR", "label": {"mk": "Меѓународни прашања", "en": "International issues"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/JUST", "label": {"mk": "Правда, правни системи и јавна безбедност", "en": "Justice, legal system and public safety"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/REGI", "label": {"mk": "Региони и градови", "en": "Regions and cities"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/SOCI", "label": {"mk": "Население и општество", "en": "Population and society"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/TECH", "label": {"mk": "Наука и технологија", "en": "Science and technology"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/TRAN", "label": {"mk": "Транспорт", "en": "Transport"}}
+         ]      
+      },    
+      { "mk_dcatap_comment": "dct:publisher <=================== check this w/profiles.py",
+        "field_name": "owner_org",
+        "label": {
+            "en": "Organization",
+            "mk": "Организација"
+        },
+        "preset": "dataset_organization"
+      },
+      { "mk_dcatap_comment": "CKAN specific field <=== can be used for dcat:contactPoint if no maintainer ",
+        "field_name": "author",
+        "label": {
+            "en": "Author",
+            "mk": "Автор"
+        },
+        "form_placeholder": "Joe Bloggs",
+        "help_text": "Testing! Help inline = false.",
+        "help_inline" : "false"
+      },
+      {  "mk_dcatap_comment": "CKAN specific field <=== can be used for dcat:contactPoint if no maintainer ",
+        "field_name": "author_email",
+        "label": {
+            "en":"Author Email",
+            "mk": "Е-пошта на авторот"
+        },
+        "form_placeholder": "joe@example.com",
+        "display_snippet": "email.html",
+        "display_email_name_field": "author", 
+        "help_text": "Testing! Help inline = true.",
+        "help_inline" : "true"
+      },
+      { "mk_dcatap_comment": "dcat:contactPoint",
+        "field_name": "maintainer",
+        "label": {
+            "en": "Maintainer",
+            "mk": "Одржувач"
+        },
+        "form_placeholder": "Joe Bloggs",
+        "help_text": "Testing! No entry for help inline."
+      },
+      { "mk_dcatap_comment": "dcat:contactPoint",
+        "field_name": "maintainer_email",
+        "label": {
+            "en": "Maintainer Email",
+            "mk": "Е-пошта на одржувачот"
+        },
+        "form_placeholder": "joe@example.com",
+        "display_snippet": "email.html",
+        "display_email_name_field": "maintainer"
+      },
+      { "mk_dcatap_comment": "dcat:keyword",
+        "field_name": "tag_string",
+        "label": {
+            "en": "Tags",
+            "mk": "Тагови"
+        },
+        "preset": "tag_string_autocomplete",
+        "form_placeholder": "eg. economy, mental health, government"
+      },
+      { "mk_dcatap_comment": "dct:accessRights",
+        "field_name": "access_rights",
+        "label": { 
+            "en": "Access Rights",
+             "no": "Права за пристап"
+        },
+        "preset": "multiple_checkbox",
+        "choices":[
+             {"value": "http://publications.europa.eu/resource/authority/access-right/PUBLIC", "label": {"en": "public", "mk": "јавни"}},
+             {"value": "http://publications.europa.eu/resource/authority/access-right/RESTRICTED", "label": {"en": "restricted", "mk": "ограничени"}},
+             {"value": "http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC", "label": {"en": "non-public", "mk": "приватни"}}
+         ]
+      },
+      { "mk_dcatap_comment": "dct:conformsTo",
+        "field_name": "conforms_to",
+        "label": { 
+            "en": "Conforms to",
+            "mk": "Во согласност со"
+        },
+        "form_placeholder": { "en": "Link",
+                              "mk": "Линк"},
+        "display_snippet": "link.html",
+        "help_text": {    "en": "Link to implementation rule or other specification.",
+                          "mk": "Линк до имплементацијата на правилото или друга спецификација."}
+      },
+      { "mk_dcatap_comment": "foaf:page",
+        "field_name": "documentation",
+        "label": { 
+            "en": "Documentation",
+            "mk": "Документација"
+        },
+        "form_placeholder": { 
+            "en": "Link",
+            "mk": "Линк"
+        },
+        "display_snippet": "link.html"
+      },
+      { "mk_dcatap_comment": "dct:accrualPeriodicity",
+        "field_name": "frequency",
+        "label": { 
+            "en": "Frequency",
+            "mk": "Фрекфенција"
+        },
+        "preset": "select",
+        "choices":[
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/ANNUAL", "label": {"en": "annual", "mk": "годишно"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/ANNUAL_2", "label": {"en": "semiannual", "mk": "двапати во годината"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/ANNUAL_3", "label": {"en": "three times a year", "mk": "трипати во годината"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/BIENNIAL", "label": {"en": "biennial", "mk": "на секои две години"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/BIMONTHLY", "label": {"en": "bimonthly", "mk": "на секои два месеци"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/BIWEEKLY", "label": {"en": "biweekly", "mk": "на секои три месеци"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/CONT", "label": {"en": "continuous", "mk": "постојано"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/DAILY", "label": {"en": "daily", "mk": "дневно"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/DAILY_2", "label": {"en": "twice a day", "mk": "двапати на ден"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/IRREG", "label": {"en": "irregular", "mk": "трипати на ден"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/MONTHLY", "label": {"en": "monthly", "mk": "месечно"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/MONTHLY_2", "label": {"en": "semimonthly", "mk": "двапати во месец"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/MONTHLY_3", "label": {"en": "three times a month", "mk": "трипати во месец"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/NEVER", "label": {"en": "never", "mk": "никогаш"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/OTHER", "label": {"en": "other", "mk": "друго"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/QUARTERLY", "label": {"en": "quarterly", "mk": "квартално"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/TRIENNIAL", "label": {"en": "triennial", "mk": "на секои три години"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/UNKNOWN", "label": {"en": "unknown", "mk": "непознато"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/UPDATE_CONT", "label": {"en": "continuously updated", "mk": "постојано се ажурира"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/WEEKLY", "label": {"en": "weekly", "mk": "неделно"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/WEEKLY_2", "label": {"en": "semiweekly", "mk": "двапати во неделата"}},
+            {"value": "http://publications.europa.eu/mdr/authority/frequency/WEEKLY_3", "label": {"en": "three times a week", "mk": "трипати во неделата"}}
+        ],
+        "form_placeholder": { "en": "Selection list to be inserted <=======================",
+                              "mk": "Одберете едно од листата <======================="}
+      },    
+       { "mk_dcatap_comment": "dcat:landingPage",
+        "field_name": "url",
+        "label": {
+            "en": "Source",
+            "mk": "Извор"
+        },
+        "form_placeholder": "http://example.com/dataset.json",
+        "display_snippet": "link.html",
+        "help_text": {    "en": "Link to main page for the dataset, with data and/or additional information.",
+                          "mk": "Линк до главната страна за податчното множество заедно со додатни информации."}
+      },
+      { "mk_dcatap_comment": "dct:language",
+          "field_name": "language",
+          "label": { 
+                "en": "Language",
+                "mk": "Јазик"
+          },
+          "preset": "multiple_checkbox",
+          "choices":[
+             {"value": "http://publications.europa.eu/resource/authority/language/MKD", "label": {"en": "Macedonian", "mk": "Македонски"}}
+          ],
+          "help_text": {    "en": "The language of the dataset.",
+                            "mk": "Јазикот на кој се напишани податоците."}
+      },
+      { "mk_dcatap_comment": "adms:identifier",
+        "field_name": "alternate_identifier",
+        "label": { 
+            "en": "Other Identifier",
+            "mk": "Друг идентификатор"
+        },
+        "form_placeholder": { "en": "something",
+                              "mk": "нешто"},
+        "help_text": {    "en": "Secondary identifier, like MAST/ADS, DataCite, DOI, EZID, or  W3ID.",
+                          "mk": "Втор идентификатор, како MAST/ADS, DataCite, DOI, EZID или  W3ID."}
+      },    
+      { "mk_dcatap_comment": "dct:provenance",
+        "field_name": "provenance",
+        "label": { 
+            "en": "Provenance",
+            "mk": "Потекло"},
+        "help_text": {    "en": "Reference to description of where/how the dataset is produced, and its quality.",
+                          "mk": "Референца до описот за тоа од каде и како потекнува ова податочно множество, како и за неговиот квалитет."}
+      },
+      { "mk_dcatap_comment": "dct:relation",
+        "field_name": "related_resource",
+        "label": { 
+            "en": "Related resource",
+            "mk": "Поврзан ресурс"
+        }
+      },
+      { "mk_dcatap_comment": "dct:issued",
+        "field_name": "issued",
+        "label": { 
+            "en": "Issued Date",
+            "mk": "Датум на издавање"
+        },
+        "preset": "date",
+        "help_text": {    "en": "The date the dataset was issued",
+                          "mk": "Датумот кога ова податочно множество било издадено"}
+      },
+      { "mk_dcatap_comment": "dct:spatial <==== FIXME ADD translation and spatial and spatial_text",
+        "field_name": "spatial_uri",
+        "label": { 
+            "en": "Location",
+            "mk": "Локација"
+        },
+        "preset": "multiple_checkbox",
+        "choices":[
+            {"value": "http://geotree.geonames.org/718075/", "label": {"en": "MKD", "mk": "MKD"}}
+        ],
+        "help_text": {    "en": "Geographical area covered by the dataset",
+                          "mk": "Географската област опфатена од податочното множество"}                        
+      },
+      { "mk_dcatap_comment": "dct:modified",
+        "field_name": "modified",
+        "label": "Modified",
+        "help_text": {
+            "en": "When the dataset was last updated",
+            "mk": "Датум на последната промена на податочното множество"
+        },
+        "preset": "date"
+      },  
+      { "mk_dcatap_comment": "owl:versionInfo",
+        "field_name": "version",
+        "label": {
+            "en": "Version",
+            "mk": "Верзија"
+        },
+        "validators": "ignore_missing unicode package_version_validator",
+        "form_placeholder": "1.0"
+      },
+      { "mk_dcatap_comment": "adms:versionNotes",
+        "field_name": "version_notes",
+        "label": {
+            "en": "Version notes",
+            "mk": "Забелешки за верзијата"
+        },
+        "form_placeholder": { "en": "The difference between this version and the previous one of the dataset",
+                              "mk": "Разликата меѓу оваа и претходната верзија на податичното множество"}
+      },      
+      { "mk_dcatap_comment": "dct:creator",
+        "field_name": "creator",
+        "label": {
+            "en": "Creator",
+            "mk": "Креатор"
+        },
+        "help_text": {    "en": "Creator of the data set.",
+                          "mk": "Креаторот на податочното множество."}
+      },    
+      { "mk_dcatap_comment": "dct:isPartOf",
+        "field_name": "is_part_of",
+        "label": {
+            "en": "Is part of",
+            "mk": "Е дел од"
+        },
+        "help_text": {    "en": "Dataset which this dataset is a part of",
+                          "mk": "Линк до податочното множество од кое ова е дел"},
+        "display_snippet": "link.html"
+      }, 
+      { "mk_dcatap_comment": "dct:hasPart",
+        "field_name": "has_part",
+        "label": {
+            "en": "Has part",
+            "mk": "Има дел"
+        },
+        "help_text": {    "en": "Dataset which has part of this dataset",
+                          "no": "Линк до податочното множество од кое има дел од ова податочно множество"},
+        "display_snippet": "link.html"
+      }, 
+      { "mk_dcatap_comment": "dct:license. NB! This is a CKAN field on dataset level. In MK-DCAT-AP, this is only given for catalogue and for distribution  <=== check this with profiles.py",
+        "field_name": "license_id",
+        "label": {
+            "en": "License",
+            "mk": "Лиценца"
+        },
+        "form_snippet": "license.html",
+        "help_text": "License definitions and additional information can be found at http://opendefinition.org/"
+      }
+      ],
+    "resource_fields": [
+      {
+        "field_name": "url",
+        "label": "URL",
+        "preset": "resource_url_upload"
+      },
+      {
+        "field_name": "name",
+        "label": {
+            "en": "Name",
+            "mk": "Име"
+        },
+        "form_placeholder": "eg. January 2011 Gold Prices"
+      },
+      {
+        "field_name": "description",
+        "label": {
+            "en": "Description",
+            "mk": "Опис"
+        },
+        "form_snippet": "markdown.html",
+        "form_placeholder": "Some useful notes about the data"
+      },
+      {
+        "field_name": "format",
+        "label": {
+            "en": "Format",
+            "mk": "Формат"
+        },
+        "preset": "resource_format_autocomplete"
+      }
+    ]
+  }
