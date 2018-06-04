@@ -10,13 +10,19 @@
                    "mk": "Наслов"
                  },
         "preset": "title",
-        "form_placeholder": "eg. A descriptive title"
+        "form_placeholder": {
+            "en": "eg. A descriptive title",
+            "mk": "пр. Описен наслов"
+        }
       },
       { "mk_dcatap_comment": "CKAN-specific field",
         "field_name": "name",
         "label": "URL",
         "preset": "dataset_slug",
-        "form_placeholder": "eg. my-dataset"
+        "form_placeholder": {
+            "en": "eg. my-dataset",
+            "mk": "пр. Мое податочно множество"
+        }
       },
       { "mk_dcatap_comment": "dct:description",
         "field_name": "notes",
@@ -25,7 +31,10 @@
             "mk": "Опис"
         },
         "form_snippet": "markdown.html",
-        "form_placeholder": "eg. Some useful notes about the data"
+        "form_placeholder": {
+            "en": "eg. Some useful notes about the data",
+            "mk": "пр. Забелешки за податоците"
+        }
       },
       { "mk_dcatap_comment": "dct:identifier",
         "field_name": "identifier",
@@ -33,7 +42,10 @@
             "en": "Identifier",
             "mk": "Идентификатор"
         },
-        "form_placeholder": "A global, unique identifier."
+        "form_placeholder": {
+            "en": "A global, unique identifier.",
+            "mk": "Глобален уникатен идентификатор"
+        }
       },
       { "mk_dcatap_comment": "dct:theme",
         "field_name": "theme",
@@ -114,7 +126,10 @@
             "mk": "Тагови"
         },
         "preset": "tag_string_autocomplete",
-        "form_placeholder": "eg. economy, mental health, government"
+        "form_placeholder": {
+            "en": "eg. economy, mental health, government",
+            "mk": "пр. економија, ментално здравје, влада"
+        }
       },
       { "mk_dcatap_comment": "dct:accessRights",
         "field_name": "access_rights",
@@ -323,7 +338,10 @@
             "mk": "Лиценца"
         },
         "form_snippet": "license.html",
-        "help_text": "License definitions and additional information can be found at http://opendefinition.org/"
+        "help_text": {
+            "en": "License definitions and additional information can be found at http://opendefinition.org/",
+            "mk": "Дефиницијата на лиценца и додатни информации можете да најдете на http://opendefinition.org/"
+        }
       }
       ],
     "resource_fields": [
@@ -338,7 +356,10 @@
             "en": "Name",
             "mk": "Име"
         },
-        "form_placeholder": "eg. January 2011 Gold Prices"
+        "form_placeholder": {
+            "en": "eg. January 2011 Gold Prices",
+            "mk": "пр. Јануари 2011, цени на злато"
+        }
       },
       {
         "field_name": "description",
@@ -347,7 +368,10 @@
             "mk": "Опис"
         },
         "form_snippet": "markdown.html",
-        "form_placeholder": "Some useful notes about the data"
+        "form_placeholder": {
+            "en": "Some useful notes about the data",
+            "mk": "Некои корисни забелешки за податоците"
+        }
       },
       {
         "field_name": "format",
