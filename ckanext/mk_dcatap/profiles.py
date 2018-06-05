@@ -281,10 +281,13 @@ class MacedonianDCATAPProfile(EuropeanDCATAPProfile):
 
         g.add((catalog_ref, DCT.description, Literal('Data catalogue of the Government of Macedonia')))
 
-        publisher_details = URIRef('{}/publisher/'.format(config.get('ckan.site_url')))
+        if config.get('ckan.dcat.publisher', False):
+            publisher_details = URIRef(config.get('ckan.dcat.publisher'))
+        else:
+            publisher_details = URIRef('{}/publisher/'.format(config.get('ckan.site_url')))
         g.add((catalog_ref, DCT.publisher, publisher_details))
 
-        self.g.add((publisher_details, DCT.identifier, Literal(config.get('ckan.dcat.publisher.identifier', 'Publisher should be set in config: ckan.publisher.identifier'))))
+        self.g.add((publisher_details, DCT.identifier, Literal(config.get('ckan.dcat.publisher.identifier', 'MISA'))))
         self.g.add((publisher_details, FOAF.homepage, URIRef(config.get('ckan.dcat.publisher.webpage', 'https://opendata.gov.mk'))))
         self.g.add((publisher_details, RDF.type, FOAF.Agent))
 
@@ -295,7 +298,7 @@ class MacedonianDCATAPProfile(EuropeanDCATAPProfile):
         for locale in locales:
             g.add((catalog_ref, DCT.language, Literal(str(locale))))
         
-        g.add((catalog_ref, DCT.license, Literal(config.get('ckan.dcat.catalog.license','CC0'))))
+        g.add((catalog_ref, DCT.license, URIRef(config.get('ckan.dcat.catalog.license_url','https://creativecommons.org/publicdomain/zero/1.0/'))))
 
         issued = config.get('ckan.dcat.catalog.issued')  # Should be string with supported datetime format
         if issued:
@@ -312,4 +315,4 @@ class MacedonianDCATAPProfile(EuropeanDCATAPProfile):
         if config.get(DCAT_RIGHTS_STATEMENT, False):
             g.add((catalog_ref, DCT.rights, Literal(config.get(DCAT_RIGHTS_STATEMENT))))
         
-        g.add((catalog_ref, DCT.spatial, Literal(config.get('ckan.dcat.spatial', "MKD"))))
+        g.add((catalog_ref, DCT.spatial, URIRef(config.get('ckan.dcat.spatial', "http://www.geonames.org/718075"))))

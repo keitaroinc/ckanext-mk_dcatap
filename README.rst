@@ -171,14 +171,18 @@ CKAN Configuration Settings
 
 To use the Macedonian RDF DCAT profile you need to install this extension and set up some properties in CKAN:
 
-* ``ckan.site_url`` - set this to your site.
-* ``ckan.dcat.publisher.identifier`` - The identifier of the data catalog publisher.
-* ``ckan.dcat.publisher.webpage`` - The webpage of the publisher. Default is ``https://opendata.gov.mk``.
-* ``ckan.dcat.catalog.title`` - Data catalog title. Default: ``data.gov.mk``
-* ``ckan.dcat.catalog.license`` - Data catalog license (not data license). Default: ``CC0``
-* ``ckan.dcat.catalog.issued`` - Date of issuing of the catalog. Must be in format ``dd.mm.YYY``, for example: ``24.05.2018``
-* ``ckan.dcat.theme_taxonomy_uri`` - Taxonomy theme URI. Default: ``http://publications.europa.eu/mdr/authority/data-theme/``
-* ``ckan.dcat.spatial`` - Spatial location. The value here is: ``MKD``
+* ``ckan.site_url`` (URL)- set this to your site.
+* ``ckan.dcat.publisher`` (URI) - sets ``dct:publisher`` (``URIRef``) in the DCAT Catalog. If not set, then ``ckan.site_url`` + ``"/publisher/"`` is used as the publisher URI.
+* ``ckan.dcat.publisher.identifier`` - sets ``dct:identifier`` (``Literal``) in the DCAT Catalog. The identifier of the data catalog publisher. The default value is ``MISA``.
+* ``ckan.dcat.publisher.webpage`` - sets ``foaf:homepage`` (``URIRef``) in the DCAT Catalog. The webpage of the publisher. Default is ``https://opendata.gov.mk``.
+* ``ckan.dcat.catalog.title`` - sets ``dct:title`` (``Literal``) in the DCAT Catalog. Data catalog title. Default: ``data.gov.mk``
+* ``ckan.dcat.catalog.license_url`` - sets ``dct:license`` (``URIRef``) in the DCAT Catalog. This is the data catalog license (not data license). Default: ``https://creativecommons.org/publicdomain/zero/1.0/``
+* ``ckan.dcat.catalog.issued`` - sets ``dct:issues`` (``Literal``) in the DCAT Catalog. Date of issuing of the catalog. Must be in format ``dd.mm.YYY``, for example: ``24.05.2018``
+* ``ckan.dcat.theme_taxonomy_uri`` - sets ``dcat:themeTaxonomy`` (``URIRef``) in the DCAT Catalog. Taxonomy theme URI. Default: ``http://publications.europa.eu/mdr/authority/data-theme/``.
+* ``ckan.dcat.spatial`` - sets ``dct:spatial`` (``URIRef``) in the DCAT Catalog. Spatial location. Default value is: ``http://www.geonames.org/718075``.
+* ``ckan.dcat.catalog.is_part_of`` - sets ``dct:isPartOf`` (``URIRef``) in the DCAT Catalog. URI to the catalog of which this catalog is part of. Not used by default.
+* ``ckan.dcat.catalog.has_part`` - sets ``dct:hasPart`` (``URIRef``) in the DCAT Catalog. URI to the catalog that is part of this catalog. Not used by default.
+* ``ckan.dcat.catalog.rights_statement`` - sets ``dct:rights`` (``Literal``) in the DCAT Catalog. The access rights statement. Not used by default.
 
 
 
