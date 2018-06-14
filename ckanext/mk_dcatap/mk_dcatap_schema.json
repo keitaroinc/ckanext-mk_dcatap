@@ -21,7 +21,7 @@
         "preset": "dataset_slug",
         "form_placeholder": {
             "en": "eg. my-dataset",
-            "mk": "пр. Мое податочно множество"
+            "mk": "пр. Мој податочен сет"
         }
       },
       { "mk_dcatap_comment": "dct:description",
@@ -84,9 +84,7 @@
             "en": "Author",
             "mk": "Автор"
         },
-        "form_placeholder": "Joe Bloggs",
-        "help_text": "Testing! Help inline = false.",
-        "help_inline" : "false"
+        "form_placeholder": "Joe Bloggs"
       },
       {  "mk_dcatap_comment": "CKAN specific field <=== can be used for dcat:contactPoint if no maintainer ",
         "field_name": "author_email",
@@ -96,9 +94,8 @@
         },
         "form_placeholder": "joe@example.com",
         "display_snippet": "email.html",
-        "display_email_name_field": "author", 
-        "help_text": "Testing! Help inline = true.",
-        "help_inline" : "true"
+        "display_email_name_field": "author",
+        "validators": "ignore_missing unicode_safe email_validator"
       },
       { "mk_dcatap_comment": "dcat:contactPoint",
         "field_name": "maintainer",
@@ -106,8 +103,7 @@
             "en": "Maintainer",
             "mk": "Одржувач"
         },
-        "form_placeholder": "Joe Bloggs",
-        "help_text": "Testing! No entry for help inline."
+        "form_placeholder": "Joe Bloggs"
       },
       { "mk_dcatap_comment": "dcat:contactPoint",
         "field_name": "maintainer_email",
@@ -117,6 +113,7 @@
         },
         "form_placeholder": "joe@example.com",
         "display_snippet": "email.html",
+        "validators": "ignore_missing unicode_safe email_validator",
         "display_email_name_field": "maintainer"
       },
       { "mk_dcatap_comment": "dcat:keyword",
@@ -135,7 +132,7 @@
         "field_name": "access_rights",
         "label": { 
             "en": "Access Rights",
-             "no": "Права за пристап"
+             "mk": "Права за пристап"
         },
         "preset": "multiple_checkbox",
         "choices":[
@@ -211,7 +208,7 @@
         "form_placeholder": "http://example.com/dataset.json",
         "display_snippet": "link.html",
         "help_text": {    "en": "Link to main page for the dataset, with data and/or additional information.",
-                          "mk": "Линк до главната страна за податчното множество заедно со додатни информации."}
+                          "mk": "Линк до главната страна за податчниот сет заедно со додатни информации."}
       },
       { "mk_dcatap_comment": "dct:language",
           "field_name": "language",
@@ -243,7 +240,7 @@
             "en": "Provenance",
             "mk": "Потекло"},
         "help_text": {    "en": "Reference to description of where/how the dataset is produced, and its quality.",
-                          "mk": "Референца до описот за тоа од каде и како потекнува ова податочно множество, како и за неговиот квалитет."}
+                          "mk": "Референца до описот за тоа од каде и како потекнува овој податочен сет, како и за неговиот квалитет."}
       },
       { "mk_dcatap_comment": "dct:relation",
         "field_name": "related_resource",
@@ -260,7 +257,7 @@
         },
         "preset": "date",
         "help_text": {    "en": "The date the dataset was issued",
-                          "mk": "Датумот кога ова податочно множество било издадено"}
+                          "mk": "Датумот кога овој податочен сет бил издаден"}
       },
       { "mk_dcatap_comment": "dct:spatial <==== FIXME ADD translation and spatial and spatial_text",
         "field_name": "spatial_uri",
@@ -273,14 +270,14 @@
             {"value": "http://geotree.geonames.org/718075/", "label": {"en": "MKD", "mk": "MKD"}}
         ],
         "help_text": {    "en": "Geographical area covered by the dataset",
-                          "mk": "Географската област опфатена од податочното множество"}                        
+                          "mk": "Географската област опфатена од податочниот сет"}
       },
       { "mk_dcatap_comment": "dct:modified",
         "field_name": "modified",
         "label": "Modified",
         "help_text": {
             "en": "When the dataset was last updated",
-            "mk": "Датум на последната промена на податочното множество"
+            "mk": "Датум на последната промена на податочен сет"
         },
         "preset": "date"
       },  
@@ -300,7 +297,7 @@
             "mk": "Забелешки за верзијата"
         },
         "form_placeholder": { "en": "The difference between this version and the previous one of the dataset",
-                              "mk": "Разликата меѓу оваа и претходната верзија на податичното множество"}
+                              "mk": "Разликата меѓу оваа и претходната верзија на податочниот сет"}
       },      
       { "mk_dcatap_comment": "dct:creator",
         "field_name": "creator",
@@ -309,7 +306,7 @@
             "mk": "Креатор"
         },
         "help_text": {    "en": "Creator of the data set.",
-                          "mk": "Креаторот на податочното множество."}
+                          "mk": "Креаторот на податочниот сет."}
       },    
       { "mk_dcatap_comment": "dct:isPartOf",
         "field_name": "is_part_of",
@@ -318,7 +315,7 @@
             "mk": "Е дел од"
         },
         "help_text": {    "en": "Dataset which this dataset is a part of",
-                          "mk": "Линк до податочното множество од кое ова е дел"},
+                          "mk": "Линк до податочниот сет од кој овој податочен сет е дел"},
         "display_snippet": "link.html"
       }, 
       { "mk_dcatap_comment": "dct:hasPart",
@@ -328,7 +325,7 @@
             "mk": "Има дел"
         },
         "help_text": {    "en": "Dataset which has part of this dataset",
-                          "no": "Линк до податочното множество од кое има дел од ова податочно множество"},
+                          "mk": "Линк до податочниот сет што има дел од овој податочен сет"},
         "display_snippet": "link.html"
       }, 
       { "mk_dcatap_comment": "dct:license. NB! This is a CKAN field on dataset level. In MK-DCAT-AP, this is only given for catalogue and for distribution  <=== check this with profiles.py",
