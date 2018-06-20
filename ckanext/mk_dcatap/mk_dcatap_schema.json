@@ -310,23 +310,26 @@
       },    
       { "mk_dcatap_comment": "dct:isPartOf",
         "field_name": "is_part_of",
+        "preset": "repeating_text",
         "label": {
             "en": "Is part of",
             "mk": "Е дел од"
         },
         "help_text": {    "en": "Dataset which this dataset is a part of",
                           "mk": "Линк до податочниот сет од кој овој податочен сет е дел"},
-        "display_snippet": "link.html"
+        "display_snippet": "repeating_text.html"
       }, 
       { "mk_dcatap_comment": "dct:hasPart",
         "field_name": "has_part",
+        "preset": "repeating_text",
+        "form_blanks": 3,
         "label": {
             "en": "Has part",
             "mk": "Има дел"
         },
         "help_text": {    "en": "Dataset which has part of this dataset",
                           "mk": "Линк до податочниот сет што има дел од овој податочен сет"},
-        "display_snippet": "link.html"
+        "display_snippet": "repeating_text.html"
       }, 
       { "mk_dcatap_comment": "dct:license. NB! This is a CKAN field on dataset level. In MK-DCAT-AP, this is only given for catalogue and for distribution  <=== check this with profiles.py",
         "field_name": "license_id",

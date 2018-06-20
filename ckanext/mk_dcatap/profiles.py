@@ -182,6 +182,20 @@ class MacedonianDCATAPProfile(EuropeanDCATAPProfile):
             if end:
                 self._add_date_triple(temporal_extent, SCHEMA.endDate, end)
             g.add((dataset_ref, DCT.temporal, temporal_extent))
+        
+        # parts - has part/is part of
+
+        if any([
+            self._get_dataset_value(dataset_dict, 'has_part'),
+            self._get_dataset_value(dataset_dict, 'is_part_of')
+        ]):
+            items = [
+                ('has_part', DCT.hasPart, None, URIRef),
+                ('is_part_of', DCT.isPartOf, None, URIRef)
+            ]
+
+            self._add_list_triples_from_dict(dataset_dict, dataset_ref, items)
+
 
         # Resources
         for resource_dict in dataset_dict.get('resources', []):
