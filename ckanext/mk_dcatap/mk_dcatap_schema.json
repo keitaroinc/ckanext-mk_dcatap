@@ -26,7 +26,7 @@
       },
       { "mk_dcatap_comment": "dct:description",
         "field_name": "notes",
-        "label": { 
+        "label": {
             "en":"Description",
             "mk": "Опис"
         },
@@ -34,7 +34,8 @@
         "form_placeholder": {
             "en": "eg. Some useful notes about the data",
             "mk": "пр. Забелешки за податоците"
-        }
+        },
+        "required": true
       },
       { "mk_dcatap_comment": "dct:identifier",
         "field_name": "identifier",
@@ -49,7 +50,7 @@
       },
       { "mk_dcatap_comment": "dct:theme",
         "field_name": "theme",
-        "label": { 
+        "label": {
             "en": "Theme/subject",
             "mk": "Предмет"
         },
@@ -68,8 +69,8 @@
              {"value": "http://publications.europa.eu/mdr/authority/data-theme/SOCI", "label": {"mk": "Население и општество", "en": "Population and society"}},
              {"value": "http://publications.europa.eu/mdr/authority/data-theme/TECH", "label": {"mk": "Наука и технологија", "en": "Science and technology"}},
              {"value": "http://publications.europa.eu/mdr/authority/data-theme/TRAN", "label": {"mk": "Транспорт", "en": "Transport"}}
-         ]      
-      },    
+         ]
+      },
       { "mk_dcatap_comment": "dct:publisher <=================== check this w/profiles.py",
         "field_name": "owner_org",
         "label": {
@@ -130,7 +131,7 @@
       },
       { "mk_dcatap_comment": "dct:accessRights",
         "field_name": "access_rights",
-        "label": { 
+        "label": {
             "en": "Access Rights",
              "mk": "Права за пристап"
         },
@@ -143,7 +144,7 @@
       },
       { "mk_dcatap_comment": "dct:conformsTo",
         "field_name": "conforms_to",
-        "label": { 
+        "label": {
             "en": "Conforms to",
             "mk": "Во согласност со"
         },
@@ -155,11 +156,11 @@
       },
       { "mk_dcatap_comment": "foaf:page",
         "field_name": "documentation",
-        "label": { 
+        "label": {
             "en": "Documentation",
             "mk": "Документација"
         },
-        "form_placeholder": { 
+        "form_placeholder": {
             "en": "Link",
             "mk": "Линк"
         },
@@ -167,7 +168,7 @@
       },
       { "mk_dcatap_comment": "dct:accrualPeriodicity",
         "field_name": "frequency",
-        "label": { 
+        "label": {
             "en": "Frequency",
             "mk": "Фрекфенција"
         },
@@ -198,7 +199,7 @@
         ],
         "form_placeholder": { "en": "Selection list to be inserted <=======================",
                               "mk": "Одберете едно од листата <======================="}
-      },    
+      },
        { "mk_dcatap_comment": "dcat:landingPage",
         "field_name": "url",
         "label": {
@@ -212,7 +213,7 @@
       },
       { "mk_dcatap_comment": "dct:language",
           "field_name": "language",
-          "label": { 
+          "label": {
                 "en": "Language",
                 "mk": "Јазик"
           },
@@ -225,7 +226,7 @@
       },
       { "mk_dcatap_comment": "adms:identifier",
         "field_name": "alternate_identifier",
-        "label": { 
+        "label": {
             "en": "Other Identifier",
             "mk": "Друг идентификатор"
         },
@@ -233,10 +234,10 @@
                               "mk": "нешто"},
         "help_text": {    "en": "Secondary identifier, like MAST/ADS, DataCite, DOI, EZID, or  W3ID.",
                           "mk": "Втор идентификатор, како MAST/ADS, DataCite, DOI, EZID или  W3ID."}
-      },    
+      },
       { "mk_dcatap_comment": "dct:provenance",
         "field_name": "provenance",
-        "label": { 
+        "label": {
             "en": "Provenance",
             "mk": "Потекло"},
         "help_text": {    "en": "Reference to description of where/how the dataset is produced, and its quality.",
@@ -244,14 +245,14 @@
       },
       { "mk_dcatap_comment": "dct:relation",
         "field_name": "related_resource",
-        "label": { 
+        "label": {
             "en": "Related resource",
             "mk": "Поврзан ресурс"
         }
       },
       { "mk_dcatap_comment": "dct:issued",
         "field_name": "issued",
-        "label": { 
+        "label": {
             "en": "Issued Date",
             "mk": "Датум на издавање"
         },
@@ -261,7 +262,7 @@
       },
       { "mk_dcatap_comment": "dct:spatial <==== FIXME ADD translation and spatial and spatial_text",
         "field_name": "spatial_uri",
-        "label": { 
+        "label": {
             "en": "Location",
             "mk": "Локација"
         },
@@ -280,7 +281,7 @@
             "mk": "Датум на последната промена на податочен сет"
         },
         "preset": "date"
-      },  
+      },
       { "mk_dcatap_comment": "owl:versionInfo",
         "field_name": "version",
         "label": {
@@ -298,7 +299,7 @@
         },
         "form_placeholder": { "en": "The difference between this version and the previous one of the dataset",
                               "mk": "Разликата меѓу оваа и претходната верзија на податочниот сет"}
-      },      
+      },
       { "mk_dcatap_comment": "dct:creator",
         "field_name": "creator",
         "label": {
@@ -307,7 +308,7 @@
         },
         "help_text": {    "en": "Creator of the data set.",
                           "mk": "Креаторот на податочниот сет."}
-      },    
+      },
       { "mk_dcatap_comment": "dct:isPartOf",
         "field_name": "is_part_of",
         "preset": "repeating_text",
@@ -318,7 +319,7 @@
         "help_text": {    "en": "Dataset which this dataset is a part of",
                           "mk": "Линк до податочниот сет од кој овој податочен сет е дел"},
         "display_snippet": "repeating_text.html"
-      }, 
+      },
       { "mk_dcatap_comment": "dct:hasPart",
         "field_name": "has_part",
         "preset": "repeating_text",
@@ -330,7 +331,7 @@
         "help_text": {    "en": "Dataset which has part of this dataset",
                           "mk": "Линк до податочниот сет што има дел од овој податочен сет"},
         "display_snippet": "repeating_text.html"
-      }, 
+      },
       { "mk_dcatap_comment": "dct:license. NB! This is a CKAN field on dataset level. In MK-DCAT-AP, this is only given for catalogue and for distribution  <=== check this with profiles.py",
         "field_name": "license_id",
         "label": {
