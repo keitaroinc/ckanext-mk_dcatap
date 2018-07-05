@@ -13,7 +13,8 @@
         "form_placeholder": {
             "en": "eg. A descriptive title",
             "mk": "пр. Описен наслов"
-        }
+        },
+        "required": true
       },
       { "mk_dcatap_comment": "CKAN-specific field",
         "field_name": "name",
