@@ -381,6 +381,38 @@
             "mk": "Формат"
         },
         "preset": "resource_format_autocomplete"
+      },
+      {
+        "field_name": "schema",
+        "label": {
+            "en": "Schema",
+            "mk": "Шема"
+        },
+        "preset": "resource_schema"
+      },
+      {
+        "field_name": "validation_options",
+        "label": {
+            "en": "Validation options",
+            "mk": "Опции за валидација"
+        },
+        "preset": "validation_options"
+      },
+      {
+        "field_name": "validation_status",
+        "label": {
+            "en": "Validation status",
+            "mk": "Статус на валидација"
+        },
+        "preset": "hidden_in_form"
+      },
+      {
+        "field_name": "validation_timestamp",
+        "label": {
+            "en": "Validation timestamp",
+            "mk": "Временска ознака на валидација"
+        },
+        "preset": "hidden_in_form"
       }
     ]
   }
