@@ -5,6 +5,7 @@ from ckanext.dcat.utils import resource_uri
 from ckan.lib.i18n import get_available_locales
 from ckan.model.license import LicenseRegister
 from ckanext.dcat.utils import resource_uri, publisher_uri_from_dataset_dict
+from ckanext.mk_dcatap.helpers import get_spatial_uri
 
 from ckantoolkit import config
 
@@ -208,6 +209,9 @@ class MacedonianDCATAPProfile(EuropeanDCATAPProfile):
         spatial_uri = self._get_dataset_value(dataset_dict, 'spatial_uri')
         spatial_text = self._get_dataset_value(dataset_dict, 'spatial_text')
         spatial_geom = self._get_dataset_value(dataset_dict, 'spatial')
+
+        if spatial_uri:
+            spatial_uri = get_spatial_uri(spatial_uri)  # map from code to URI
 
         if spatial_uri or spatial_text or spatial_geom:
             if spatial_uri:

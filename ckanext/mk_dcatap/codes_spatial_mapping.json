@@ -1,0 +1,382 @@
+{
+  "MKD": {
+    "code": "MKD",
+    "spatial_uri": "https://www.openstreetmap.org/relation/53293",
+    "name": "Macedonia"
+  },
+  "MK-02": {
+    "code": "MK-02",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2460855",
+    "name": "Aracinovo"
+  },
+  "MK-03": {
+    "code": "MK-03",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2583831",
+    "name": "Berovo"
+  },
+  "MK-04": {
+    "code": "MK-04",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2598354",
+    "name": "Bitola"
+  },
+  "MK-05": {
+    "code": "MK-05",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2591418",
+    "name": "Bogdanci"
+  },
+  "MK-06": {
+    "code": "MK-06",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2615507",
+    "name": "Bogovinje"
+  },
+  "MK-07": {
+    "code": "MK-07",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2589323",
+    "name": "Bosilovo"
+  },
+  "MK-08": {
+    "code": "MK-08",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2615505",
+    "name": "Brvenica"
+  },
+  "MK-10": {
+    "code": "MK-10",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2590953",
+    "name": "Valandovo"
+  },
+  "MK-11": {
+    "code": "MK-11",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2589047",
+    "name": "Vasilevo"
+  },
+  "MK-12": {
+    "code": "MK-12",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2603187",
+    "name": "Vevchani"
+  },
+  "MK-13": {
+    "code": "MK-13",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2575609",
+    "name": "Veles"
+  },
+  "MK-14": {
+    "code": "MK-14",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2583460",
+    "name": "Vinica"
+  },
+  "MK-15": {
+    "code": "MK-15",
+    "spatial_uri": "https://www.openstreetmap.org/relation/6428717",
+    "name": "Vranestica"
+  },
+  "MK-16": {
+    "code": "MK-16",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2615539",
+    "name": "Vrapchishte"
+  },
+  "MK-18": {
+    "code": "MK-18",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2591417",
+    "name": "Gevgelija"
+  },
+  "MK-19": {
+    "code": "MK-19",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2615530",
+    "name": "Gostivar"
+  },
+  "MK-20": {
+    "code": "MK-20",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2575972",
+    "name": "Gradsko"
+  },
+  "MK-21": {
+    "code": "MK-21",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2605591",
+    "name": "Debar"
+  },
+  "MK-22": {
+    "code": "MK-22",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2603059",
+    "name": "Debarca"
+  },
+  "MK-23": {
+    "code": "MK-23",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2583474",
+    "name": "Delchevo"
+  },
+  "MK-24": {
+    "code": "MK-24",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2577810",
+    "name": "Demir Kapija"
+  },
+  "MK-25": {
+    "code": "MK-25",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2598353",
+    "name": "Demir Hisar"
+  },
+  "MK-27": {
+    "code": "MK-27",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2592899",
+    "name": "Dolneni"
+  },
+  "MK-26": {
+    "code": "MK-26",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2591259",
+    "name": "Dojran"
+  },
+  "MK-28": {
+    "code": "MK-28",
+    "spatial_uri": "https://www.openstreetmap.org/relation/6437982",
+    "name": "Drugovo"
+  },
+  "MK-30": {
+    "code": "MK-30",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2615107",
+    "name": "Zhelino"
+  },
+  "MK-31": {
+    "code": "MK-31",
+    "spatial_uri": "https://www.openstreetmap.org/relation/6435124",
+    "name": "Zajas"
+  },
+  "MK-32": {
+    "code": "MK-32",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2460678",
+    "name": "Zelenikovo"
+  },
+  "MK-33": {
+    "code": "MK-33",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2581655",
+    "name": "Zrnovci"
+  },
+  "MK-34": {
+    "code": "MK-34",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2460762",
+    "name": "Ilinden"
+  },
+  "MK-35": {
+    "code": "MK-35",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2608570",
+    "name": "Jegunovce"
+  },
+  "MK-36": {
+    "code": "MK-36",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2577610",
+    "name": "Kavadarci"
+  },
+  "MK-37": {
+    "code": "MK-37",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2580986",
+    "name": "Karbinci"
+  },
+  "MK-40": {
+    "code": "MK-40",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2606600",
+    "name": "Kichevo"
+  },
+  "MK-41": {
+    "code": "MK-41",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2589262",
+    "name": "Konche"
+  },
+  "MK-42": {
+    "code": "MK-42",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2454874",
+    "name": "Kochani"
+  },
+  "MK-43": {
+    "code": "MK-43",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2587448",
+    "name": "Kratovo"
+  },
+  "MK-44": {
+    "code": "MK-44",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2587615",
+    "name": "Kriva Palanka"
+  },
+  "MK-45": {
+    "code": "MK-45",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2596009",
+    "name": "Krivogashtani"
+  },
+  "MK-46": {
+    "code": "MK-46",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2596098",
+    "name": "Krushevo"
+  },
+  "MK-47": {
+    "code": "MK-47",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2585982",
+    "name": "Kumanovo"
+  },
+  "MK-48": {
+    "code": "MK-48",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2585376",
+    "name": "Lipkovo"
+  },
+  "MK-49": {
+    "code": "MK-49",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2572593",
+    "name": "Lozovo"
+  },
+  "MK-50": {
+    "code": "MK-50",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2615675",
+    "name": "Mavrovo and Rostusha"
+  },
+  "MK-51": {
+    "code": "MK-51",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2583425",
+    "name": "Makedonska Kamenica"
+  },
+  "MK-52": {
+    "code": "MK-52",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2608091",
+    "name": "Makedonski Brod"
+  },
+  "MK-53": {
+    "code": "MK-53",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2596099",
+    "name": "Mogila"
+  },
+  "MK-54": {
+    "code": "MK-54",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2577657",
+    "name": "Negotino"
+  },
+  "MK-55": {
+    "code": "MK-55",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2598190",
+    "name": "Novaci"
+  },
+  "MK-56": {
+    "code": "MK-56",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2589373",
+    "name": "Novo Selo"
+  },
+  "MK-57": {
+    "code": "MK-57",
+    "spatial_uri": "https://www.openstreetmap.org/relation/6435119",
+    "name": "Oslomej"
+  },
+  "MK-58": {
+    "code": "MK-58",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2601514",
+    "name": "Ohrid"
+  },
+  "MK-59": {
+    "code": "MK-59",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2460743",
+    "name": "Petrovec"
+  },
+  "MK-60": {
+    "code": "MK-60",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2583788",
+    "name": "Pehchevo"
+  },
+  "MK-61": {
+    "code": "MK-61",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2608063",
+    "name": "Plasnica"
+  },
+  "MK-62": {
+    "code": "MK-62",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2593112",
+    "name": "Prilep"
+  },
+  "MK-63": {
+    "code": "MK-63",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2582634",
+    "name": "Probishtip"
+  },
+  "MK-64": {
+    "code": "MK-64",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2588938",
+    "name": "Radovish"
+  },
+  "MK-65": {
+    "code": "MK-65",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2587610",
+    "name": "Rankovce"
+  },
+  "MK-66": {
+    "code": "MK-66",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2598355",
+    "name": "Resen"
+  },
+  "MK-67": {
+    "code": "MK-67",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2577488",
+    "name": "Rosoman"
+  },
+  "MK-69": {
+    "code": "MK-69",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2572599",
+    "name": "Sveti Nikole"
+  },
+  "MK-83": {
+    "code": "MK-83",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2460481",
+    "name": "Sopishte"
+  },
+  "MK-84": {
+    "code": "MK-84",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2586114",
+    "name": "Staro Nagorichane"
+  },
+  "MK-71": {
+    "code": "MK-71",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2603188",
+    "name": "Struga"
+  },
+  "MK-72": {
+    "code": "MK-72",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2591087",
+    "name": "Strumica"
+  },
+  "MK-73": {
+    "code": "MK-73",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2460539",
+    "name": "Studenichani"
+  },
+  "MK-75": {
+    "code": "MK-75",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2615128",
+    "name": "Tearce"
+  },
+  "MK-76": {
+    "code": "MK-76",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2615182",
+    "name": "Tetovo"
+  },
+  "MK-78": {
+    "code": "MK-78",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2605589",
+    "name": "Centar Zhupa"
+  },
+  "MK-80": {
+    "code": "MK-80",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2576148",
+    "name": "Chashka"
+  },
+  "MK-81": {
+    "code": "MK-81",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2581719",
+    "name": "Cheshinovo-Obleshevo"
+  },
+  "MK-82": {
+    "code": "MK-82",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2460854",
+    "name": "Chucher Sandevo"
+  },
+  "MK-85": {
+    "code": "MK-85",
+    "spatial_uri": "https://www.openstreetmap.org/relation/6966465",
+    "name": "Skopje"
+  },
+  "MK-70": {
+    "code": "MK-70",
+    "spatial_uri": "https://www.openstreetmap.org/relation/2580154",
+    "name": "Shtip"
+  }
+}
