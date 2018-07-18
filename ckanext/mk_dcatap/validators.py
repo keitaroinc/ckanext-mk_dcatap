@@ -5,15 +5,13 @@ from ckan.logic import NotFound
 not_empty = get_validator('not_empty')
 
 def request_data_only_members_in_org_validator(key, data, errors, context):
-    print "   =====> params: ", request.params.get("metadata")
-    if not request.params.get("metadata"):
+    if not _get_request_param("metadata"):
         return
     return members_in_org_validator(key, data, errors, context)
 
 
 def request_data_only_required(key, data, errors, context):
-    print "   =====> params: ", request.params.get("metadata")
-    if not request.params.get("metadata"):
+    if not _get_request_param("metadata"):
         return
     if not data.get(key):
         errors[key].append(_('Required field'))
@@ -25,8 +23,6 @@ def members_in_org_validator(key, data, errors, context):
     owner_org = data.get(('owner_org',))
     if owner_org is None:
         owner_org = data.get('owner_org')
-    print ' ===> owner org ->', owner_org
-    print ' ===> type:', type(owner_org)
     data_dict = {
         'id': owner_org
     }
@@ -71,3 +67,10 @@ def members_in_org_validator(key, data, errors, context):
             errors[key].append(message)
 
     data[key] = ','.join(user_ids)
+
+
+def _get_request_param(param):
+    try:
+        return request.params.get(param)
+    except TypeError:
+        return None
