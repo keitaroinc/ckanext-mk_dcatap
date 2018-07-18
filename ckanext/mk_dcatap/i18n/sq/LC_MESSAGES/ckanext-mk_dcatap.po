@@ -1,0 +1,33 @@
+# Albanian translations for ckanext-mk_dcatap.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the ckanext-mk_dcatap
+# project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ckanext-mk_dcatap 0.0.1\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-07-18 16:54+0200\n"
+"PO-Revision-Date: 2018-07-18 17:01+0200\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: sq\n"
+"Language-Team: sq <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ckanext/mk_dcatap/validators.py:17
+msgid "Required field"
+msgstr "Fusha e kërkuar"
+
+#: ckanext/mk_dcatap/validators.py:60
+msgid "The user with email \"{0}\" is not part of this organization."
+msgstr "Përdoruesi me email \ "{0} \" nuk është pjesë e këtij institucioni."
+
+#: ckanext/mk_dcatap/validators.py:65
+msgid "The user with email \"{0}\" does not exist."
+msgstr "Përdoruesi me email \ "{0} \" nuk ekziston."
+
