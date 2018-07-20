@@ -7,12 +7,14 @@
       { "mk_dcatap_comment": "dct:title",
         "field_name": "title",
         "label": { "en": "Title",
-                   "mk": "Наслов"
+                   "mk": "Наслов",
+                   "sq": "Titull" 
                  },
         "preset": "title",
         "form_placeholder": {
             "en": "eg. A descriptive title",
-            "mk": "пр. Описен наслов"
+            "mk": "пр. Описен наслов",
+            "sq": "p.sh. Një titull përshkrues"
         },
         "required": true
       },
@@ -22,19 +24,22 @@
         "preset": "dataset_slug",
         "form_placeholder": {
             "en": "eg. my-dataset",
-            "mk": "пр. Мој податочен сет"
+            "mk": "пр. Мој податочен сет",
+            "sq": "p.sh. Seti i të dhënave të mia"
         }
       },
       { "mk_dcatap_comment": "dct:description",
         "field_name": "notes",
         "label": {
             "en":"Description",
-            "mk": "Опис"
+            "mk": "Опис",
+            "sq": "Përshkrimi"
         },
         "form_snippet": "markdown.html",
         "form_placeholder": {
             "en": "eg. Some useful notes about the data",
-            "mk": "пр. Забелешки за податоците"
+            "mk": "пр. Забелешки за податоците",
+            "sq": "p.sh. Disa shënime të dobishme në lidhje me të dhënat"
         },
         "required": true
       },
@@ -42,41 +47,45 @@
         "field_name": "identifier",
         "label": {
             "en": "Identifier",
-            "mk": "Идентификатор"
+            "mk": "Идентификатор",
+            "sq": "Identifikuesi"
         },
         "form_placeholder": {
             "en": "A global, unique identifier.",
-            "mk": "Глобален уникатен идентификатор"
+            "mk": "Глобален уникатен идентификатор",
+            "sq": "Një identifikues global, unik."
         }
       },
       { "mk_dcatap_comment": "dct:theme",
         "field_name": "theme",
         "label": {
             "en": "Theme/subject",
-            "mk": "Предмет"
+            "mk": "Предмет",
+            "sq": "Subjekt"
         },
         "preset": "multiple_checkbox",
         "choices":[
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/AGRI", "label": {"mk": "Земјоделство, шумарство, рибарство и храна", "en": "Agriculture, fisheries, forestry and food"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/ECON", "label": {"mk": "Економија и финансии", "en": "Economy and finance"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/EDUC", "label": {"mk": "Образование, култура и спорт", "en": "Education, culture and sport"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/ENER", "label": {"mk": "Енергија", "en": "Energy"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/ENVI", "label": {"mk": "Животна средина", "en": "Environment"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/GOVE", "label": {"mk": "Влада и јавен сектор", "en": "Government and public sector"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/HEAL", "label": {"mk": "Здравство", "en": "Health"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/INTR", "label": {"mk": "Меѓународни прашања", "en": "International issues"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/JUST", "label": {"mk": "Правда, правни системи и јавна безбедност", "en": "Justice, legal system and public safety"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/REGI", "label": {"mk": "Региони и градови", "en": "Regions and cities"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/SOCI", "label": {"mk": "Население и општество", "en": "Population and society"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/TECH", "label": {"mk": "Наука и технологија", "en": "Science and technology"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/TRAN", "label": {"mk": "Транспорт", "en": "Transport"}}
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/AGRI", "label": {"mk": "Земјоделство, шумарство, рибарство и храна", "en": "Agriculture, fisheries, forestry and food", "sq": "Bujqësia, peshkataria, pyjet dhe ushqimi"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/ECON", "label": {"mk": "Економија и финансии", "en": "Economy and finance", "sq": "Ekonomi dhe financa"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/EDUC", "label": {"mk": "Образование, култура и спорт", "en": "Education, culture and sport", "sq": "Edukimi, kultura dhe sporti"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/ENER", "label": {"mk": "Енергија", "en": "Energy", "sq": "Energji"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/ENVI", "label": {"mk": "Животна средина", "en": "Environment", "sq": "Mjedis"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/GOVE", "label": {"mk": "Влада и јавен сектор", "en": "Government and public sector", "sq": "Qeveria dhe sektori publik"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/HEAL", "label": {"mk": "Здравство", "en": "Health", "sq": "Shëndetësor"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/INTR", "label": {"mk": "Меѓународни прашања", "en": "International issues", "sq": "Çështje ndërkombëtare"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/JUST", "label": {"mk": "Правда, правни системи и јавна безбедност", "en": "Justice, legal system and public safety", "sq": "Drejtësia, sistemi ligjor dhe siguria publike"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/REGI", "label": {"mk": "Региони и градови", "en": "Regions and cities", "sq": "Rajonet dhe qytetet"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/SOCI", "label": {"mk": "Население и општество", "en": "Population and society", "sq": "Popullsia dhe shoqëria"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/TECH", "label": {"mk": "Наука и технологија", "en": "Science and technology", "sq": "Shkencë dhe Teknologji"}},
+             {"value": "http://publications.europa.eu/mdr/authority/data-theme/TRAN", "label": {"mk": "Транспорт", "en": "Transport", "sq": "Transport"}}
          ]
       },
       { "mk_dcatap_comment": "dct:publisher <=================== check this w/profiles.py",
         "field_name": "owner_org",
         "label": {
             "en": "Organization",
-            "mk": "Организација"
+            "mk": "Институција",
+            "sq": "institucion"
         },
         "preset": "dataset_organization"
       },
@@ -84,7 +93,8 @@
         "field_name": "author",
         "label": {
             "en": "Author",
-            "mk": "Автор"
+            "mk": "Автор",
+            "sq": "Autor"
         },
         "form_placeholder": "Joe Bloggs"
       },
@@ -92,7 +102,8 @@
         "field_name": "author_email",
         "label": {
             "en":"Author Email",
-            "mk": "Е-пошта на авторот"
+            "mk": "Е-пошта на авторот",
+            "sq": "Autori i Email"
         },
         "form_placeholder": "joe@example.com",
         "display_snippet": "email.html",
@@ -103,7 +114,8 @@
         "field_name": "maintainer",
         "label": {
             "en": "Maintainer",
-            "mk": "Одржувач"
+            "mk": "Одржувач",
+            "sq": "Mirëmbajtësi"
         },
         "validators": "request_data_only_required",
         "form_placeholder": "Joe Bloggs"
@@ -112,7 +124,8 @@
         "field_name": "maintainer_email",
         "label": {
             "en": "Maintainer Email",
-            "mk": "Е-пошта на одржувачот"
+            "mk": "Е-пошта на одржувачот",
+            "sq": "Mbajtësi i emailit"
         },
         "form_placeholder": "joe@example.com",
         "display_snippet": "email.html",
@@ -123,48 +136,56 @@
         "field_name": "tag_string",
         "label": {
             "en": "Tags",
-            "mk": "Тагови"
+            "mk": "Тагови",
+            "sq": "Tags"
         },
         "preset": "tag_string_autocomplete",
         "form_placeholder": {
             "en": "eg. economy, mental health, government",
-            "mk": "пр. економија, ментално здравје, влада"
+            "mk": "пр. економија, ментално здравје, влада",
+            "sq": "psh. ekonominë, shëndetin mendor, qeverinë"
         }
       },
       { "mk_dcatap_comment": "dct:accessRights",
         "field_name": "access_rights",
         "label": {
             "en": "Access Rights",
-             "mk": "Права за пристап"
+             "mk": "Права за пристап",
+             "sq": "Të drejtat e qasjes"
         },
         "preset": "multiple_checkbox",
         "choices":[
-             {"value": "http://publications.europa.eu/resource/authority/access-right/PUBLIC", "label": {"en": "public", "mk": "јавни"}},
-             {"value": "http://publications.europa.eu/resource/authority/access-right/RESTRICTED", "label": {"en": "restricted", "mk": "ограничени"}},
-             {"value": "http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC", "label": {"en": "non-public", "mk": "приватни"}}
+             {"value": "http://publications.europa.eu/resource/authority/access-right/PUBLIC", "label": {"en": "public", "mk": "јавни", "sq": "publik"}},
+             {"value": "http://publications.europa.eu/resource/authority/access-right/RESTRICTED", "label": {"en": "restricted", "mk": "ограничени", "sq": "kufizohen"}},
+             {"value": "http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC", "label": {"en": "non-public", "mk": "приватни", "sq": "privat"}}
          ]
       },
       { "mk_dcatap_comment": "dct:conformsTo",
         "field_name": "conforms_to",
         "label": {
             "en": "Conforms to",
-            "mk": "Во согласност со"
+            "mk": "Во согласност со",
+            "sq": "Përputhet me"
         },
         "form_placeholder": { "en": "Link",
-                              "mk": "Линк"},
+                              "mk": "Линк",
+                              "sq": "Lidhje"},
         "display_snippet": "link.html",
         "help_text": {    "en": "Link to implementation rule or other specification.",
-                          "mk": "Линк до имплементацијата на правилото или друга спецификација."}
+                          "mk": "Линк до имплементацијата на правилото или друга спецификација.",
+                          "sq": "Lidhja me rregullin e zbatimit ose specifikime të tjera."}
       },
       { "mk_dcatap_comment": "foaf:page",
         "field_name": "documentation",
         "label": {
             "en": "Documentation",
-            "mk": "Документација"
+            "mk": "Документација",
+            "sq": "Dokumentim"
         },
         "form_placeholder": {
             "en": "Link",
-            "mk": "Линк"
+            "mk": "Линк",
+            "sq": "Lidhje"
         },
         "display_snippet": "link.html"
       },
@@ -172,190 +193,211 @@
         "field_name": "frequency",
         "label": {
             "en": "Frequency",
-            "mk": "Фрекфенција"
+            "mk": "Фреквенција",
+            "sq": "Frekuencë"
         },
         "preset": "select",
         "choices":[
-            {"value": "ANNUAL", "label": {"en": "annual", "mk": "годишно"}},
-            {"value": "ANNUAL_2", "label": {"en": "semiannual", "mk": "двапати во годината"}},
-            {"value": "ANNUAL_3", "label": {"en": "three times a year", "mk": "трипати во годината"}},
-            {"value": "BIENNIAL", "label": {"en": "biennial", "mk": "на секои две години"}},
-            {"value": "BIMONTHLY", "label": {"en": "bimonthly", "mk": "на секои два месеци"}},
-            {"value": "BIWEEKLY", "label": {"en": "biweekly", "mk": "на секои три месеци"}},
-            {"value": "CONT", "label": {"en": "continuous", "mk": "постојано"}},
-            {"value": "DAILY", "label": {"en": "daily", "mk": "дневно"}},
-            {"value": "DAILY_2", "label": {"en": "twice a day", "mk": "двапати на ден"}},
-            {"value": "IRREG", "label": {"en": "irregular", "mk": "трипати на ден"}},
-            {"value": "MONTHLY", "label": {"en": "monthly", "mk": "месечно"}},
-            {"value": "MONTHLY_2", "label": {"en": "semimonthly", "mk": "двапати во месец"}},
-            {"value": "MONTHLY_3", "label": {"en": "three times a month", "mk": "трипати во месец"}},
-            {"value": "NEVER", "label": {"en": "never", "mk": "никогаш"}},
-            {"value": "OTHER", "label": {"en": "other", "mk": "друго"}},
-            {"value": "QUARTERLY", "label": {"en": "quarterly", "mk": "квартално"}},
-            {"value": "TRIENNIAL", "label": {"en": "triennial", "mk": "на секои три години"}},
-            {"value": "UNKNOWN", "label": {"en": "unknown", "mk": "непознато"}},
-            {"value": "UPDATE_CONT", "label": {"en": "continuously updated", "mk": "постојано се ажурира"}},
-            {"value": "WEEKLY", "label": {"en": "weekly", "mk": "неделно"}},
-            {"value": "WEEKLY_2", "label": {"en": "semiweekly", "mk": "двапати во неделата"}},
-            {"value": "WEEKLY_3", "label": {"en": "three times a week", "mk": "трипати во неделата"}}
+            {"value": "ANNUAL", "label": {"en": "annual", "mk": "годишно", "sq": "vjetor"}},
+            {"value": "ANNUAL_2", "label": {"en": "semiannual", "mk": "двапати во годината", "sq": "gjashtëmujor"}},
+            {"value": "ANNUAL_3", "label": {"en": "three times a year", "mk": "трипати во годината", "sq": "tri herë në vit"}},
+            {"value": "BIENNIAL", "label": {"en": "biennial", "mk": "на секои две години", "sq": "dyvjeçar"}},
+            {"value": "BIMONTHLY", "label": {"en": "bimonthly", "mk": "на секои два месеци", "sq": "dy mujore"}},
+            {"value": "BIWEEKLY", "label": {"en": "biweekly", "mk": "на секои три месеци", "sq": "dyjavor"}},
+            {"value": "CONT", "label": {"en": "continuous", "mk": "постојано", "sq": "i vazhdueshëm"}},
+            {"value": "DAILY", "label": {"en": "daily", "mk": "дневно", "sq": "i përditshëm"}},
+            {"value": "DAILY_2", "label": {"en": "twice a day", "mk": "двапати на ден", "sq": "dy herë në ditë"}},
+            {"value": "IRREG", "label": {"en": "irregular", "mk": "нерегуларно", "sq": "i parregullt"}},
+            {"value": "MONTHLY", "label": {"en": "monthly", "mk": "месечно", "sq": "mujor"}},
+            {"value": "MONTHLY_2", "label": {"en": "semimonthly", "mk": "двапати во месец", "sq": "dy herë në muaj"}},
+            {"value": "MONTHLY_3", "label": {"en": "three times a month", "mk": "трипати во месец", "sq": "tri herë në muaj"}},
+            {"value": "NEVER", "label": {"en": "never", "mk": "никогаш", "sq": "asnjëherë"}},
+            {"value": "OTHER", "label": {"en": "other", "mk": "друго", "sq": "tjetër"}},
+            {"value": "QUARTERLY", "label": {"en": "quarterly", "mk": "квартално", "sq": "tremujor"}},
+            {"value": "TRIENNIAL", "label": {"en": "triennial", "mk": "на секои три години", "sq": "çdo tre vjet"}},
+            {"value": "UNKNOWN", "label": {"en": "unknown", "mk": "непознато", "sq": "i panjohur"}},
+            {"value": "UPDATE_CONT", "label": {"en": "continuously updated", "mk": "постојано се ажурира", "sq": "përditësuar vazhdimisht"}},
+            {"value": "WEEKLY", "label": {"en": "weekly", "mk": "неделно", "sq": "javor"}},
+            {"value": "WEEKLY_2", "label": {"en": "semiweekly", "mk": "двапати во неделата", "sq": "dy herë në javë"}},
+            {"value": "WEEKLY_3", "label": {"en": "three times a week", "mk": "трипати во неделата", "sq": "tri herë në javë"}}
         ],
         "form_placeholder": { "en": "Selection list to be inserted <=======================",
-                              "mk": "Одберете едно од листата <======================="}
+                              "mk": "Одберете едно од листата <=======================",
+                              "sq": "Zgjidh një nga lista <======================="
+                            }
       },
        { "mk_dcatap_comment": "dcat:landingPage",
         "field_name": "url",
         "label": {
             "en": "Source",
-            "mk": "Извор"
+            "mk": "Извор",
+            "sq": "burim"
         },
         "form_placeholder": "http://example.com/dataset.json",
         "display_snippet": "link.html",
         "help_text": {    "en": "Link to main page for the dataset, with data and/or additional information.",
-                          "mk": "Линк до главната страна за податчниот сет заедно со додатни информации."}
+                          "mk": "Линк до главната страна за податчниот сет заедно со додатни информации.",
+                          "sq": "Lidhu me faqen kryesore të setit të të dhënave, me të dhëna dhe / ose informata shtesë."
+                        }
       },
       { "mk_dcatap_comment": "dct:language",
           "field_name": "language",
           "label": {
                 "en": "Language",
-                "mk": "Јазик"
+                "mk": "Јазик",
+                "sq": "Gjuhe"
           },
           "preset": "multiple_checkbox",
           "choices":[
              {"value": "http://publications.europa.eu/resource/authority/language/MKD", "label": {"en": "Macedonian", "mk": "Македонски"}}
           ],
           "help_text": {    "en": "The language of the dataset.",
-                            "mk": "Јазикот на кој се напишани податоците."}
+                            "mk": "Јазикот на кој се напишани податоците.",
+                            "sq": "Gjuha e setit të të dhënave."
+                        }
       },
       { "mk_dcatap_comment": "adms:identifier",
         "field_name": "alternate_identifier",
         "label": {
             "en": "Other Identifier",
-            "mk": "Друг идентификатор"
+            "mk": "Друг идентификатор",
+            "sq": "Identifikues tjetër"
         },
         "form_placeholder": { "en": "something",
-                              "mk": "нешто"},
+                              "mk": "нешто",
+                              "sq": "diçka"
+                            },
         "help_text": {    "en": "Secondary identifier, like MAST/ADS, DataCite, DOI, EZID, or  W3ID.",
-                          "mk": "Втор идентификатор, како MAST/ADS, DataCite, DOI, EZID или  W3ID."}
+                          "mk": "Втор идентификатор, како MAST/ADS, DataCite, DOI, EZID или  W3ID.",
+                          "sq": "Identifikues dytësor, si MAST / ADS, DataCite, DOI, EZID ose W3ID."}
       },
       { "mk_dcatap_comment": "dct:provenance",
         "field_name": "provenance",
         "label": {
             "en": "Provenance",
-            "mk": "Потекло"},
+            "mk": "Потекло",
+            "sq": "prejardhje"},
         "help_text": {    "en": "Reference to description of where/how the dataset is produced, and its quality.",
-                          "mk": "Референца до описот за тоа од каде и како потекнува овој податочен сет, како и за неговиот квалитет."}
+                          "mk": "Референца до описот за тоа од каде и како потекнува овој податочен сет, како и за неговиот квалитет.",
+                          "sq": "Referenca në përshkrimin se ku / si është prodhuar skema e të dhënave, dhe cilësia e tij."}
       },
       { "mk_dcatap_comment": "dct:relation",
         "field_name": "related_resource",
         "label": {
             "en": "Related resource",
-            "mk": "Поврзан ресурс"
+            "mk": "Поврзан ресурс",
+            "sq": "Burime të ngjashme"
         }
       },
       { "mk_dcatap_comment": "dct:issued",
         "field_name": "issued",
         "label": {
             "en": "Issued Date",
-            "mk": "Датум на издавање"
+            "mk": "Датум на издавање",
+            "sq": "Data e leshimit"
         },
         "preset": "date",
         "help_text": {    "en": "The date the dataset was issued",
-                          "mk": "Датумот кога овој податочен сет бил издаден"}
+                          "mk": "Датумот кога овој податочен сет бил издаден",
+                          "sq": "Datën që është lëshuar grupi i të dhënave"}
       },
       { "mk_dcatap_comment": "dct:spatial <==== FIXME ADD translation and spatial and spatial_text",
         "field_name": "spatial_uri",
         "label": {
             "en": "Location",
-            "mk": "Локација"
+            "mk": "Локација",
+            "sq": "Lokacioni"
         },
         "preset": "select",
         "choices":[
-            {"value": "MKD", "label": {"en": "Macedonia", "mk": "Македонија"}},
-            {"value": "MK-02", "label": {"en": "Aracinovo", "mk": "Арачиново"}},
-            {"value": "MK-03", "label": {"en": "Berovo", "mk": "Берово"}},
-            {"value": "MK-04", "label": {"en": "Bitola", "mk": "Битола"}},
-            {"value": "MK-05", "label": {"en": "Bogdanci", "mk": "Богданци"}},
-            {"value": "MK-06", "label": {"en": "Bogovinje", "mk": "Боговиње"}},
-            {"value": "MK-07", "label": {"en": "Bosilovo", "mk": "Босилово"}},
-            {"value": "MK-08", "label": {"en": "Brvenica", "mk": "Брвеница"}},
-            {"value": "MK-10", "label": {"en": "Valandovo", "mk": "Валандово"}},
-            {"value": "MK-11", "label": {"en": "Vasilevo", "mk": "Василево"}},
-            {"value": "MK-12", "label": {"en": "Vevchani", "mk": "Вевчани"}},
-            {"value": "MK-13", "label": {"en": "Veles", "mk": "Велес"}},
-            {"value": "MK-14", "label": {"en": "Vinica", "mk": "Виница"}},
-            {"value": "MK-15", "label": {"en": "Vranestica", "mk": "Вранештица"}},
-            {"value": "MK-16", "label": {"en": "Vrapchishte", "mk": "Врапчиште"}},
-            {"value": "MK-18", "label": {"en": "Gevgelija", "mk": "Гевгелија"}},
-            {"value": "MK-19", "label": {"en": "Gostivar", "mk": "Гостивар"}},
-            {"value": "MK-20", "label": {"en": "Gradsko", "mk": "Градско"}},
-            {"value": "MK-21", "label": {"en": "Debar", "mk": "Дебар"}},
-            {"value": "MK-22", "label": {"en": "Debarca", "mk": "Дебарца"}},
-            {"value": "MK-23", "label": {"en": "Delchevo", "mk": "Делчево"}},
-            {"value": "MK-24", "label": {"en": "Demir Kapija", "mk": "Демир Капија"}},
-            {"value": "MK-25", "label": {"en": "Demir Hisar", "mk": "Демир Хисар"}},
-            {"value": "MK-27", "label": {"en": "Dolneni", "mk": "Долнени"}},
-            {"value": "MK-26", "label": {"en": "Dojran", "mk": "Дојран"}},
-            {"value": "MK-28", "label": {"en": "Drugovo", "mk": "Другово"}},
-            {"value": "MK-30", "label": {"en": "Zhelino", "mk": "Желино"}},
-            {"value": "MK-31", "label": {"en": "Zajas", "mk": "Зајас"}},
-            {"value": "MK-32", "label": {"en": "Zelenikovo", "mk": "Зелениково"}},
-            {"value": "MK-33", "label": {"en": "Zrnovci", "mk": "Зрновци"}},
-            {"value": "MK-34", "label": {"en": "Ilinden", "mk": "Илинден"}},
-            {"value": "MK-35", "label": {"en": "Jegunovce", "mk": "Јегуновце"}},
-            {"value": "MK-36", "label": {"en": "Kavadarci", "mk": "Кавадарци"}},
-            {"value": "MK-37", "label": {"en": "Karbinci", "mk": "Карбинци"}},
-            {"value": "MK-40", "label": {"en": "Kichevo", "mk": "Кичево"}},
-            {"value": "MK-41", "label": {"en": "Konche", "mk": "Конче"}},
-            {"value": "MK-42", "label": {"en": "Kochani", "mk": "Кочани"}},
-            {"value": "MK-43", "label": {"en": "Kratovo", "mk": "Кратово"}},
-            {"value": "MK-44", "label": {"en": "Kriva Palanka", "mk": "Крива Паланка"}},
-            {"value": "MK-45", "label": {"en": "Krivogashtani", "mk": "Кривогаштани"}},
-            {"value": "MK-46", "label": {"en": "Krushevo", "mk": "Крушево"}},
-            {"value": "MK-47", "label": {"en": "Kumanovo", "mk": "Куманово"}},
-            {"value": "MK-48", "label": {"en": "Lipkovo", "mk": "Липково"}},
-            {"value": "MK-49", "label": {"en": "Lozovo", "mk": "Лозово"}},
-            {"value": "MK-50", "label": {"en": "Mavrovo and Rostusha", "mk": "Маврово и Ростуша"}},
-            {"value": "MK-51", "label": {"en": "Makedonska Kamenica", "mk": "Македонска Каменица"}},
-            {"value": "MK-52", "label": {"en": "Makedonski Brod", "mk": "Македонски Брод"}},
-            {"value": "MK-53", "label": {"en": "Mogila", "mk": "Могила"}},
-            {"value": "MK-54", "label": {"en": "Negotino", "mk": "Неготино"}},
-            {"value": "MK-55", "label": {"en": "Novaci", "mk": "Новаци"}},
-            {"value": "MK-56", "label": {"en": "Novo Selo", "mk": "Ново Село"}},
-            {"value": "MK-57", "label": {"en": "Oslomej", "mk": "Осломеј"}},
-            {"value": "MK-58", "label": {"en": "Ohrid", "mk": "Охрид"}},
-            {"value": "MK-59", "label": {"en": "Petrovec", "mk": "Петровец"}},
-            {"value": "MK-60", "label": {"en": "Pehchevo", "mk": "Пехчево"}},
-            {"value": "MK-61", "label": {"en": "Plasnica", "mk": "Пласница"}},
-            {"value": "MK-62", "label": {"en": "Prilep", "mk": "Прилеп"}},
-            {"value": "MK-63", "label": {"en": "Probishtip", "mk": "Пробиштип"}},
-            {"value": "MK-64", "label": {"en": "Radovish", "mk": "Радовиш"}},
-            {"value": "MK-65", "label": {"en": "Rankovce", "mk": "Ранковце"}},
-            {"value": "MK-66", "label": {"en": "Resen", "mk": "Ресен"}},
-            {"value": "MK-67", "label": {"en": "Rosoman", "mk": "Росоман"}},
-            {"value": "MK-69", "label": {"en": "Sveti Nikole", "mk": "Свети Николе"}},
-            {"value": "MK-83", "label": {"en": "Sopishte", "mk": "Сопиште"}},
-            {"value": "MK-84", "label": {"en": "Staro Nagorichane", "mk": "Старо Нагоричане"}},
-            {"value": "MK-71", "label": {"en": "Struga", "mk": "Струга"}},
-            {"value": "MK-72", "label": {"en": "Strumica", "mk": "Струмица"}},
-            {"value": "MK-73", "label": {"en": "Studenichani", "mk": "Студеничани"}},
-            {"value": "MK-75", "label": {"en": "Tearce", "mk": "Теарце"}},
-            {"value": "MK-76", "label": {"en": "Tetovo", "mk": "Тетово"}},
-            {"value": "MK-78", "label": {"en": "Centar Zhupa", "mk": "Центар Жупа"}},
-            {"value": "MK-80", "label": {"en": "Chashka", "mk": "Чашка"}},
-            {"value": "MK-81", "label": {"en": "Cheshinovo-Obleshevo", "mk": "Чешиново-Облешево"}},
-            {"value": "MK-82", "label": {"en": "Chucher Sandevo", "mk": "Чучер Сандево"}},
-            {"value": "MK-85", "label": {"en": "Skopje", "mk": "Скопје"}},
-            {"value": "MK-70", "label": {"en": "Shtip", "mk": "Штип"}}
+            {"value": "MKD", "label": {"en": "Macedonia", "mk": "Македонија", "sq": "Maqedoni"}},
+            {"value": "MK-02", "label": {"en": "Aracinovo", "mk": "Арачиново", "sq": "Haraçinë"}},
+            {"value": "MK-03", "label": {"en": "Berovo", "mk": "Берово", "sq": "Berova"}},
+            {"value": "MK-04", "label": {"en": "Bitola", "mk": "Битола", "sq": "Manastiri"}},
+            {"value": "MK-05", "label": {"en": "Bogdanci", "mk": "Богданци", "sq": "Bogdanca"}},
+            {"value": "MK-06", "label": {"en": "Bogovinje", "mk": "Боговиње", "sq": "Bogovina"}},
+            {"value": "MK-07", "label": {"en": "Bosilovo", "mk": "Босилово", "sq": "Bosillova"}},
+            {"value": "MK-08", "label": {"en": "Brvenica", "mk": "Брвеница", "sq": "Brvenica"}},
+            {"value": "MK-10", "label": {"en": "Valandovo", "mk": "Валандово", "sq": "Vallandova"}},
+            {"value": "MK-11", "label": {"en": "Vasilevo", "mk": "Василево", "sq": "Vasileva"}},
+            {"value": "MK-12", "label": {"en": "Vevchani", "mk": "Вевчани", "sq": "Vevçani"}},
+            {"value": "MK-13", "label": {"en": "Veles", "mk": "Велес", "sq": "Velesi"}},
+            {"value": "MK-14", "label": {"en": "Vinica", "mk": "Виница", "sq": "Vinica"}},
+            {"value": "MK-15", "label": {"en": "Vranestica", "mk": "Вранештица", "sq": "Vraneshticës"}},
+            {"value": "MK-16", "label": {"en": "Vrapchishte", "mk": "Врапчиште", "sq": "Vrapciste"}},
+            {"value": "MK-18", "label": {"en": "Gevgelija", "mk": "Гевгелија", "sq": "Gjevgjelia"}},
+            {"value": "MK-19", "label": {"en": "Gostivar", "mk": "Гостивар", "sq": "Gostivari"}},
+            {"value": "MK-20", "label": {"en": "Gradsko", "mk": "Градско", "sq": "Gradsko"}},
+            {"value": "MK-21", "label": {"en": "Debar", "mk": "Дебар", "sq": "Dibra"}},
+            {"value": "MK-22", "label": {"en": "Debarca", "mk": "Дебарца", "sq": "Debarca"}},
+            {"value": "MK-23", "label": {"en": "Delchevo", "mk": "Делчево", "sq": "Dellçeva"}},
+            {"value": "MK-24", "label": {"en": "Demir Kapija", "mk": "Демир Капија", "sq": "Demir Kapia"}},
+            {"value": "MK-25", "label": {"en": "Demir Hisar", "mk": "Демир Хисар", "sq": "Demir Hisari"}},
+            {"value": "MK-27", "label": {"en": "Dolneni", "mk": "Долнени", "sq": "Dollneni"}},
+            {"value": "MK-26", "label": {"en": "Dojran", "mk": "Дојран", "sq": "Dojran"}},
+            {"value": "MK-28", "label": {"en": "Drugovo", "mk": "Другово", "sq": "Drugovo"}},
+            {"value": "MK-30", "label": {"en": "Zhelino", "mk": "Желино", "sq": "Zhelina"}},
+            {"value": "MK-31", "label": {"en": "Zajas", "mk": "Зајас", "sq": "Zajas"}},
+            {"value": "MK-32", "label": {"en": "Zelenikovo", "mk": "Зелениково", "sq": "Zelenikova"}},
+            {"value": "MK-33", "label": {"en": "Zrnovci", "mk": "Зрновци", "sq": "Zrnovci"}},
+            {"value": "MK-34", "label": {"en": "Ilinden", "mk": "Илинден", "sq": ""}},
+            {"value": "MK-35", "label": {"en": "Jegunovce", "mk": "Јегуновце", "sq": "Jegunovce"}},
+            {"value": "MK-36", "label": {"en": "Kavadarci", "mk": "Кавадарци", "sq": "Kavadari"}},
+            {"value": "MK-37", "label": {"en": "Karbinci", "mk": "Карбинци", "sq": ""}},
+            {"value": "MK-40", "label": {"en": "Kichevo", "mk": "Кичево", "sq": "Kërçova"}},
+            {"value": "MK-41", "label": {"en": "Konche", "mk": "Конче", "sq": "Konçe"}},
+            {"value": "MK-42", "label": {"en": "Kochani", "mk": "Кочани", "sq": "Koçani"}},
+            {"value": "MK-43", "label": {"en": "Kratovo", "mk": "Кратово", "sq": "Kratova"}},
+            {"value": "MK-44", "label": {"en": "Kriva Palanka", "mk": "Крива Паланка", "sq": "Kriva Pallanka"}},
+            {"value": "MK-45", "label": {"en": "Krivogashtani", "mk": "Кривогаштани", "sq": "Krivogastani"}},
+            {"value": "MK-46", "label": {"en": "Krushevo", "mk": "Крушево", "sq": "Krusheva"}},
+            {"value": "MK-47", "label": {"en": "Kumanovo", "mk": "Куманово", "sq": "Kumanova"}},
+            {"value": "MK-48", "label": {"en": "Lipkovo", "mk": "Липково", "sq": "Likovë"}},
+            {"value": "MK-49", "label": {"en": "Lozovo", "mk": "Лозово", "sq": "Llozovë"}}, 
+            {"value": "MK-50", "label": {"en": "Mavrovo and Rostusha", "mk": "Маврово и Ростуша", "sq": "Mavrovë dhe Rostushë"}},
+            {"value": "MK-51", "label": {"en": "Makedonska Kamenica", "mk": "Македонска Каменица", "sq": "Makedonska Kamenica"}},
+            {"value": "MK-52", "label": {"en": "Makedonski Brod", "mk": "Македонски Брод", "sq": "Brodi"}},
+            {"value": "MK-53", "label": {"en": "Mogila", "mk": "Могила", "sq": "Mogilla"}},
+            {"value": "MK-54", "label": {"en": "Negotino", "mk": "Неготино", "sq": "Negotina"}},
+            {"value": "MK-55", "label": {"en": "Novaci", "mk": "Новаци", "sq": "Novaci"}},
+            {"value": "MK-56", "label": {"en": "Novo Selo", "mk": "Ново Село", "sq": "Novo Selo"}},
+            {"value": "MK-57", "label": {"en": "Oslomej", "mk": "Осломеј", "sq": "Oslomej"}},
+            {"value": "MK-58", "label": {"en": "Ohrid", "mk": "Охрид", "sq": "Ohri"}},
+            {"value": "MK-59", "label": {"en": "Petrovec", "mk": "Петровец", "sq": "Petrovac"}},
+            {"value": "MK-60", "label": {"en": "Pehchevo", "mk": "Пехчево", "sq": "Peçeva"}},
+            {"value": "MK-61", "label": {"en": "Plasnica", "mk": "Пласница", "sq": "Plasnicë"}},
+            {"value": "MK-62", "label": {"en": "Prilep", "mk": "Прилеп", "sq": "Prilepi"}},
+            {"value": "MK-63", "label": {"en": "Probishtip", "mk": "Пробиштип", "sq": "Probishtipi"}},
+            {"value": "MK-64", "label": {"en": "Radovish", "mk": "Радовиш", "sq": "Radovishti"}},
+            {"value": "MK-65", "label": {"en": "Rankovce", "mk": "Ранковце", "sq": "Rankovce"}},
+            {"value": "MK-66", "label": {"en": "Resen", "mk": "Ресен", "sq": "Resnja"}},
+            {"value": "MK-67", "label": {"en": "Rosoman", "mk": "Росоман", "sq": "Rosoman"}},
+            {"value": "MK-69", "label": {"en": "Sveti Nikole", "mk": "Свети Николе", "sq": "Sveti Nikolla"}},
+            {"value": "MK-83", "label": {"en": "Sopishte", "mk": "Сопиште", "sq": "Sopiste"}},
+            {"value": "MK-84", "label": {"en": "Staro Nagorichane", "mk": "Старо Нагоричане", "sq": "Staro Nagorichane"}},
+            {"value": "MK-71", "label": {"en": "Struga", "mk": "Струга", "sq": "Strugë"}},
+            {"value": "MK-72", "label": {"en": "Strumica", "mk": "Струмица", "sq": "Strumicë"}},
+            {"value": "MK-73", "label": {"en": "Studenichani", "mk": "Студеничани", "sq": "Studenicani"}},
+            {"value": "MK-75", "label": {"en": "Tearce", "mk": "Теарце", "sq": "Tearcë"}},
+            {"value": "MK-76", "label": {"en": "Tetovo", "mk": "Тетово", "sq": "Tetovë"}},
+            {"value": "MK-78", "label": {"en": "Centar Zhupa", "mk": "Центар Жупа", "sq": "Qendra Zhupa"}},
+            {"value": "MK-80", "label": {"en": "Chashka", "mk": "Чашка", "sq": "Çashkë"}},
+            {"value": "MK-81", "label": {"en": "Cheshinovo-Obleshevo", "mk": "Чешиново-Облешево", "sq": "Çeshinovë-Obleshevë"}},
+            {"value": "MK-82", "label": {"en": "Chucher Sandevo", "mk": "Чучер Сандево", "sq": "Chucher Sandevë"}},
+            {"value": "MK-85", "label": {"en": "Skopje", "mk": "Скопје", "sq": "Shkupi"}},
+            {"value": "MK-70", "label": {"en": "Shtip", "mk": "Штип", "sq": "Shtipi"}}
         ],
         "help_text": {    "en": "Geographical area covered by the dataset",
-                          "mk": "Географската област опфатена од податочниот сет"}
+                          "mk": "Географската област опфатена од податочниот сет",
+                          "sq": "Zona gjeografike e mbuluar nga skema e të dhënave"}
       },
       { "mk_dcatap_comment": "dct:modified",
         "field_name": "modified",
         "label": "Modified",
         "help_text": {
             "en": "When the dataset was last updated",
-            "mk": "Датум на последната промена на податочен сет"
+            "mk": "Датум на последната промена на податочен сет",
+            "sq": "Data e ndryshimit të fundit në setin e të dhënave"
         },
         "preset": "date"
       },
@@ -363,7 +405,8 @@
         "field_name": "version",
         "label": {
             "en": "Version",
-            "mk": "Верзија"
+            "mk": "Верзија",
+            "sq": "Version"
         },
         "validators": "ignore_missing unicode package_version_validator",
         "form_placeholder": "1.0"
@@ -372,26 +415,31 @@
         "field_name": "version_notes",
         "label": {
             "en": "Version notes",
-            "mk": "Забелешки за верзијата"
+            "mk": "Забелешки за верзијата",
+            "sq": "Shënimet e versionit"
         },
         "form_placeholder": { "en": "The difference between this version and the previous one of the dataset",
-                              "mk": "Разликата меѓу оваа и претходната верзија на податочниот сет"}
+                              "mk": "Разликата меѓу оваа и претходната верзија на податочниот сет",
+                              "sq": "Dallimi në mes të këtij versioni dhe atij të mëparshëm të grupit të të dhënave"}
       },
       { "mk_dcatap_comment": "dct:creator",
         "field_name": "creator",
         "label": {
             "en": "Creator",
-            "mk": "Креатор"
+            "mk": "Креатор",
+            "sq": "Krijues"
         },
         "help_text": {    "en": "Creator of the data set.",
-                          "mk": "Креаторот на податочниот сет."}
+                          "mk": "Креаторот на податочниот сет.",
+                          "sq": "Krijuesi i setit të të dhënave."}
       },
       { "mk_dcatap_comment": "dct:isPartOf",
         "field_name": "is_part_of",
         "preset": "repeating_text",
         "label": {
             "en": "Is part of",
-            "mk": "Е дел од"
+            "mk": "Е дел од",
+            "sq": "Është pjesë e"
         },
         "help_text": {    "en": "Dataset which this dataset is a part of",
                           "mk": "Линк до податочниот сет од кој овој податочен сет е дел"},
@@ -403,7 +451,8 @@
         "form_blanks": 3,
         "label": {
             "en": "Has part",
-            "mk": "Има дел"
+            "mk": "Има дел",
+            "sq": "Ka pjesë"
         },
         "help_text": {    "en": "Dataset which has part of this dataset",
                           "mk": "Линк до податочниот сет што има дел од овој податочен сет"},
@@ -413,12 +462,14 @@
         "field_name": "license_id",
         "label": {
             "en": "License",
-            "mk": "Лиценца"
+            "mk": "Лиценца",
+            "sq": "Liçensë"
         },
         "form_snippet": "license.html",
         "help_text": {
             "en": "License definitions and additional information can be found at http://opendefinition.org/",
-            "mk": "Дефиницијата на лиценца и додатни информации можете да најдете на http://opendefinition.org/"
+            "mk": "Дефиницијата на лиценца и додатни информации можете да најдете на http://opendefinition.org/",
+            "eq": "Përkufizimet e licencës dhe informatat shtesë mund të gjenden në http://opendefinition.org/"
         }
       }
       ],
@@ -432,30 +483,35 @@
         "field_name": "name",
         "label": {
             "en": "Name",
-            "mk": "Име"
+            "mk": "Име",
+            "sq": "Emër"
         },
         "form_placeholder": {
             "en": "eg. January 2011 Gold Prices",
-            "mk": "пр. Јануари 2011, цени на злато"
+            "mk": "пр. Јануари 2011, цени на злато",
+            "sq": "për shembull. Janar 2011, çmimet e arit"
         }
       },
       {
         "field_name": "description",
         "label": {
             "en": "Description",
-            "mk": "Опис"
+            "mk": "Опис",
+            "sq": "Përshkrimi"
         },
         "form_snippet": "markdown.html",
         "form_placeholder": {
             "en": "Some useful notes about the data",
-            "mk": "Некои корисни забелешки за податоците"
+            "mk": "Некои корисни забелешки за податоците",
+            "sq": "Disa shënime të dobishme në lidhje me të dhënat"
         }
       },
       {
         "field_name": "format",
         "label": {
             "en": "Format",
-            "mk": "Формат"
+            "mk": "Формат",
+            "sq": "Format"
         },
         "preset": "resource_format_autocomplete"
       },
@@ -463,7 +519,8 @@
         "field_name": "schema",
         "label": {
             "en": "Schema",
-            "mk": "Шема"
+            "mk": "Шема",
+            "sq": "Skemë"
         },
         "preset": "resource_schema"
       },
@@ -471,7 +528,8 @@
         "field_name": "validation_options",
         "label": {
             "en": "Validation options",
-            "mk": "Опции за валидација"
+            "mk": "Опции за валидација",
+            "sq": "Opsionet e validimit"
         },
         "preset": "validation_options"
       },
@@ -479,7 +537,8 @@
         "field_name": "validation_status",
         "label": {
             "en": "Validation status",
-            "mk": "Статус на валидација"
+            "mk": "Статус на валидација",
+            "sq": "Statusi i validimit"
         },
         "preset": "hidden_in_form"
       },
@@ -487,7 +546,8 @@
         "field_name": "validation_timestamp",
         "label": {
             "en": "Validation timestamp",
-            "mk": "Временска ознака на валидација"
+            "mk": "Временска ознака на валидација",
+            "sq": "Vlefshmëria e validimit"
         },
         "preset": "hidden_in_form"
       }
