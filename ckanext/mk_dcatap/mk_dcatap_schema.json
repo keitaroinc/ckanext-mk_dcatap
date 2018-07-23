@@ -84,8 +84,8 @@
         "field_name": "owner_org",
         "label": {
             "en": "Organization",
-            "mk": "Институција",
-            "sq": "institucion"
+            "mk": "Организација",
+            "sq": "Оrganizatë"
         },
         "preset": "dataset_organization"
       },
