@@ -25,7 +25,7 @@ msgstr "Fusha e kërkuar"
 
 #: ckanext/mk_dcatap/validators.py:60
 msgid "The user with email \"{0}\" is not part of this organization."
-msgstr "Përdoruesi me email \ "{0} \" nuk është pjesë e këtij institucioni."
+msgstr "Përdoruesi me email \ "{0} \" nuk është pjesë e kësaj organizate."
 
 #: ckanext/mk_dcatap/validators.py:65
 msgid "The user with email \"{0}\" does not exist."
