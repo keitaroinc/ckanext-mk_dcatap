@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ckanext-mk_dcatap 0.0.1\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-07-18 16:54+0200\n"
+"POT-Creation-Date: 2018-07-23 21:16+0200\n"
 "PO-Revision-Date: 2018-07-18 16:54+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: mk\n"
@@ -25,7 +25,7 @@ msgstr "Задолжително поле"
 
 #: ckanext/mk_dcatap/validators.py:60
 msgid "The user with email \"{0}\" is not part of this organization."
-msgstr "Корисникот со е-пошта \"{0}\" не е дел од оваа институција."
+msgstr "Корисникот со е-пошта \"{0}\" не е дел од оваа организација."
 
 #: ckanext/mk_dcatap/validators.py:65
 msgid "The user with email \"{0}\" does not exist."
