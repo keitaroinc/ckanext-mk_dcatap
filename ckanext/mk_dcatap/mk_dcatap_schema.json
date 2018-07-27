@@ -5,18 +5,29 @@
     "about_url": "https://opendata.gov.mk/about",
     "dataset_fields": [
       { "mk_dcatap_comment": "dct:title",
-        "field_name": "title",
-        "label": { "en": "Title",
-                   "mk": "Наслов",
-                   "sq": "Titull" 
-                 },
-        "preset": "title",
+        "field_name": "title_translated",
+        "label": {
+            "en": "Title",
+            "mk": "Наслов",
+            "sq": "Titull"
+        },
+        "form_snippet": "datagovmk_fluent_text.html",
+        "display_snippet": "datagovmk_fluent_text.html",
+        "validators": "fluent_text",
+        "output_validators": "fluent_core_translated_output",
         "form_placeholder": {
             "en": "eg. A descriptive title",
             "mk": "пр. Описен наслов",
             "sq": "p.sh. Një titull përshkrues"
         },
-        "required": true
+        "required": true,
+        "form_attrs": {
+            "class": "form-control"
+        },
+        "first_form_attrs": {
+            "data-module": "slug-preview-target",
+            "class": "form-control"
+        }
       },
       { "mk_dcatap_comment": "CKAN-specific field",
         "field_name": "name",
@@ -29,19 +40,26 @@
         }
       },
       { "mk_dcatap_comment": "dct:description",
-        "field_name": "notes",
+        "field_name": "notes_translated",
         "label": {
             "en":"Description",
             "mk": "Опис",
             "sq": "Përshkrimi"
         },
-        "form_snippet": "markdown.html",
+
         "form_placeholder": {
             "en": "eg. Some useful notes about the data",
             "mk": "пр. Забелешки за податоците",
             "sq": "p.sh. Disa shënime të dobishme në lidhje me të dhënat"
         },
-        "required": true
+        "required": true,
+        "form_snippet": "fluent_markdown.html",
+        "display_snippet": "fluent_markdown.html",
+        "validators": "fluent_text",
+        "output_validators": "fluent_core_translated_output",
+        "form_attrs": {
+            "class": "form-control"
+        }
       },
       { "mk_dcatap_comment": "dct:identifier",
         "field_name": "identifier",
@@ -353,7 +371,7 @@
             {"value": "MK-46", "label": {"en": "Krushevo", "mk": "Крушево", "sq": "Krusheva"}},
             {"value": "MK-47", "label": {"en": "Kumanovo", "mk": "Куманово", "sq": "Kumanova"}},
             {"value": "MK-48", "label": {"en": "Lipkovo", "mk": "Липково", "sq": "Likovë"}},
-            {"value": "MK-49", "label": {"en": "Lozovo", "mk": "Лозово", "sq": "Llozovë"}}, 
+            {"value": "MK-49", "label": {"en": "Lozovo", "mk": "Лозово", "sq": "Llozovë"}},
             {"value": "MK-50", "label": {"en": "Mavrovo and Rostusha", "mk": "Маврово и Ростуша", "sq": "Mavrovë dhe Rostushë"}},
             {"value": "MK-51", "label": {"en": "Makedonska Kamenica", "mk": "Македонска Каменица", "sq": "Makedonska Kamenica"}},
             {"value": "MK-52", "label": {"en": "Makedonski Brod", "mk": "Македонски Брод", "sq": "Brodi"}},
