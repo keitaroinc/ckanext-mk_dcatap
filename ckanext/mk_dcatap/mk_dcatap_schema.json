@@ -498,7 +498,7 @@
         "preset": "resource_url_upload"
       },
       {
-        "field_name": "name",
+        "field_name": "name_translated",
         "label": {
             "en": "Name",
             "mk": "Име",
@@ -508,20 +508,28 @@
             "en": "eg. January 2011 Gold Prices",
             "mk": "пр. Јануари 2011, цени на злато",
             "sq": "për shembull. Janar 2011, çmimet e arit"
+        },
+        "preset": "fluent_core_translated",
+        "form_attrs": {
+            "class": "form-control"
         }
       },
       {
-        "field_name": "description",
+        "field_name": "description_translated",
         "label": {
             "en": "Description",
             "mk": "Опис",
             "sq": "Përshkrimi"
         },
-        "form_snippet": "markdown.html",
+        "form_snippet": "fluent_markdown.html",
         "form_placeholder": {
             "en": "Some useful notes about the data",
             "mk": "Некои корисни забелешки за податоците",
             "sq": "Disa shënime të dobishme në lidhje me të dhënat"
+        },
+        "preset": "fluent_core_translated",
+        "form_attrs": {
+            "class": "form-control"
         }
       },
       {
