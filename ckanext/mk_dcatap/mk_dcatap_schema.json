@@ -15,6 +15,7 @@
         "display_snippet": "datagovmk_fluent_text.html",
         "validators": "fluent_text",
         "output_validators": "fluent_core_translated_output",
+        "form_languages": ["mk"],
         "form_placeholder": {
             "en": "eg. A descriptive title",
             "mk": "пр. Описен наслов",
@@ -46,17 +47,17 @@
             "mk": "Опис",
             "sq": "Përshkrimi"
         },
-
+        "form_snippet": "datagovmk_fluent_markdown.html",
+        "display_snippet": "fluent_markdown.html",
+        "validators": "fluent_text",
+        "output_validators": "fluent_core_translated_output",
+        "form_languages": ["mk"],
         "form_placeholder": {
             "en": "eg. Some useful notes about the data",
             "mk": "пр. Забелешки за податоците",
             "sq": "p.sh. Disa shënime të dobishme në lidhje me të dhënat"
         },
         "required": true,
-        "form_snippet": "fluent_markdown.html",
-        "display_snippet": "fluent_markdown.html",
-        "validators": "fluent_text",
-        "output_validators": "fluent_core_translated_output",
         "form_attrs": {
             "class": "form-control"
         }
