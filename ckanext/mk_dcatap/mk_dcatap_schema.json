@@ -94,27 +94,6 @@
         },
         "preset": "dataset_organization"
       },
-      { "mk_dcatap_comment": "CKAN specific field <=== can be used for dcat:contactPoint if no maintainer ",
-        "field_name": "author",
-        "label": {
-            "en": "Author",
-            "mk": "Автор",
-            "sq": "Autor"
-        },
-        "form_placeholder": "Joe Bloggs"
-      },
-      {  "mk_dcatap_comment": "CKAN specific field <=== can be used for dcat:contactPoint if no maintainer ",
-        "field_name": "author_email",
-        "label": {
-            "en":"Author Email",
-            "mk": "Е-пошта на авторот",
-            "sq": "Autori i Email"
-        },
-        "form_placeholder": "joe@example.com",
-        "display_snippet": "email.html",
-        "display_email_name_field": "author",
-        "validators": "ignore_missing unicode_safe email_validator"
-      },
       { "mk_dcatap_comment": "dcat:contactPoint",
         "field_name": "maintainer",
         "label": {
@@ -428,17 +407,6 @@
         "form_placeholder": { "en": "The difference between this version and the previous one of the dataset",
                               "mk": "Разликата меѓу оваа и претходната верзија на податочниот сет",
                               "sq": "Dallimi në mes të këtij versioni dhe atij të mëparshëm të grupit të të dhënave"}
-      },
-      { "mk_dcatap_comment": "dct:creator",
-        "field_name": "creator",
-        "label": {
-            "en": "Creator",
-            "mk": "Креатор",
-            "sq": "Krijues"
-        },
-        "help_text": {    "en": "Creator of the data set.",
-                          "mk": "Креаторот на податочниот сет.",
-                          "sq": "Krijuesi i setit të të dhënave."}
       },
       { "mk_dcatap_comment": "dct:isPartOf",
         "field_name": "is_part_of",

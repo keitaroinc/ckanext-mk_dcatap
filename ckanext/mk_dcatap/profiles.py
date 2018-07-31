@@ -121,8 +121,6 @@ class MacedonianDCATAPProfile(EuropeanDCATAPProfile):
             self._get_dataset_value(dataset_dict, 'contact_email'),
             self._get_dataset_value(dataset_dict, 'maintainer'),
             self._get_dataset_value(dataset_dict, 'maintainer_email'),
-            self._get_dataset_value(dataset_dict, 'author'),
-            self._get_dataset_value(dataset_dict, 'author_email'),
         ]):
 
             contact_uri = self._get_dataset_value(dataset_dict, 'contact_uri')
@@ -135,9 +133,8 @@ class MacedonianDCATAPProfile(EuropeanDCATAPProfile):
             g.add((dataset_ref, DCAT.contactPoint, contact_details))
 
             items = [
-                ('contact_name', VCARD.fn, ['maintainer', 'author'], Literal),
-                ('contact_email', VCARD.hasEmail, ['maintainer_email',
-                                                   'author_email'], Literal),
+                ('contact_name', VCARD.fn, ['maintainer'], Literal),
+                ('contact_email', VCARD.hasEmail, ['maintainer_email'], Literal),
             ]
 
             self._add_triples_from_dict(dataset_dict, contact_details, items)
