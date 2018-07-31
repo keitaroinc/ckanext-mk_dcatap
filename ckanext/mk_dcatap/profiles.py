@@ -77,7 +77,7 @@ class MacedonianDCATAPProfile(EuropeanDCATAPProfile):
             ('title', DCT.title, None, Literal),
             ('notes', DCT.description, None, Literal),
             ('url', DCAT.landingPage, None, URIRef),
-            ('identifier', DCT.identifier, ['guid', 'id'], Literal),  # FIXME: Should use the global unique identifer
+            ('identifier', DCT.identifier, ['guid', 'id'], Literal),
             ('version', OWL.versionInfo, ['dcat_version'], Literal),
             ('version_notes', ADMS.versionNotes, None, Literal),
             ('frequency', DCT.accrualPeriodicity, None, URIRef),

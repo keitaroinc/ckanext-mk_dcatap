@@ -61,19 +61,6 @@
             "class": "form-control"
         }
       },
-      { "mk_dcatap_comment": "dct:identifier",
-        "field_name": "identifier",
-        "label": {
-            "en": "Identifier",
-            "mk": "Идентификатор",
-            "sq": "Identifikuesi"
-        },
-        "form_placeholder": {
-            "en": "A global, unique identifier.",
-            "mk": "Глобален уникатен идентификатор",
-            "sq": "Një identifikues global, unik."
-        }
-      },
       { "mk_dcatap_comment": "dct:theme",
         "field_name": "theme",
         "label": {
@@ -171,11 +158,11 @@
              "mk": "Права за пристап",
              "sq": "Të drejtat e qasjes"
         },
-        "preset": "multiple_checkbox",
+        "preset": "select",
         "choices":[
-             {"value": "http://publications.europa.eu/resource/authority/access-right/PUBLIC", "label": {"en": "public", "mk": "јавни", "sq": "publik"}},
-             {"value": "http://publications.europa.eu/resource/authority/access-right/RESTRICTED", "label": {"en": "restricted", "mk": "ограничени", "sq": "kufizohen"}},
-             {"value": "http://publications.europa.eu/resource/authority/access-right/NON_PUBLIC", "label": {"en": "non-public", "mk": "приватни", "sq": "privat"}}
+             {"value": "PUBLIC", "label": {"en": "public", "mk": "јавни", "sq": "publik"}},
+             {"value": "RESTRICTED", "label": {"en": "restricted", "mk": "ограничени", "sq": "kufizohen"}},
+             {"value": "NON_PUBLIC", "label": {"en": "non-public", "mk": "приватни", "sq": "privat"}}
          ]
       },
       { "mk_dcatap_comment": "dct:conformsTo",
@@ -267,7 +254,9 @@
           },
           "preset": "multiple_checkbox",
           "choices":[
-             {"value": "http://publications.europa.eu/resource/authority/language/MKD", "label": {"en": "Macedonian", "mk": "Македонски"}}
+             {"value": "MKD", "label": {"en": "Macedonian", "mk": "Македонски", "sq": "Maqedonase"}},
+             {"value": "ALB", "label": {"en": "Albanian", "mk": "Албански", "sq": "Shqip"}},
+             {"value": "ENG", "label": {"en": "English", "mk": "Англиски", "sq": "Angleze"}}
           ],
           "help_text": {    "en": "The language of the dataset.",
                             "mk": "Јазикот на кој се напишани податоците.",
