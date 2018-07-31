@@ -114,8 +114,7 @@
         },
         "form_placeholder": "joe@example.com",
         "display_snippet": "email.html",
-        "validators": "ignore_missing unicode_safe email_validator request_data_only_required request_data_only_members_in_owner_org ",
-        "display_email_name_field": "maintainer"
+        "validators": "ignore_missing unicode_safe email_validator request_data_only_required request_data_only_members_in_owner_org "
       },
       { "mk_dcatap_comment": "dcat:keyword",
         "field_name": "tag_string",
