@@ -249,7 +249,8 @@ class MacedonianDCATAPProfile(EuropeanDCATAPProfile):
             if 'license' not in resource_dict and 'license_id' in dataset_dict:
                 lr = LicenseRegister()
                 _license = lr.get(dataset_dict['license_id'])
-                resource_dict['license'] = _license.url
+                if _license:
+                    resource_dict['license'] = _license.url
 
             #  Simple values
             items = [
