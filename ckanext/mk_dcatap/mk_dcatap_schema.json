@@ -66,25 +66,30 @@
         "field_name": "theme",
         "label": {
             "en": "Theme/subject",
-            "mk": "Предмет",
+            "mk": "Категорија/тема",
             "sq": "Subjekt"
         },
         "preset": "multiple_checkbox",
         "choices":[
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/AGRI", "label": {"mk": "Земјоделство, шумарство, рибарство и храна", "en": "Agriculture, fisheries, forestry and food", "sq": "Bujqësia, peshkataria, pyjet dhe ushqimi"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/ECON", "label": {"mk": "Економија и финансии", "en": "Economy and finance", "sq": "Ekonomi dhe financa"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/EDUC", "label": {"mk": "Образование, култура и спорт", "en": "Education, culture and sport", "sq": "Edukimi, kultura dhe sporti"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/ENER", "label": {"mk": "Енергија", "en": "Energy", "sq": "Energji"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/ENVI", "label": {"mk": "Животна средина", "en": "Environment", "sq": "Mjedis"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/GOVE", "label": {"mk": "Влада и јавен сектор", "en": "Government and public sector", "sq": "Qeveria dhe sektori publik"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/HEAL", "label": {"mk": "Здравство", "en": "Health", "sq": "Shëndetësor"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/INTR", "label": {"mk": "Меѓународни прашања", "en": "International issues", "sq": "Çështje ndërkombëtare"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/JUST", "label": {"mk": "Правда, правни системи и јавна безбедност", "en": "Justice, legal system and public safety", "sq": "Drejtësia, sistemi ligjor dhe siguria publike"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/REGI", "label": {"mk": "Региони и градови", "en": "Regions and cities", "sq": "Rajonet dhe qytetet"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/SOCI", "label": {"mk": "Население и општество", "en": "Population and society", "sq": "Popullsia dhe shoqëria"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/TECH", "label": {"mk": "Наука и технологија", "en": "Science and technology", "sq": "Shkencë dhe Teknologji"}},
-             {"value": "http://publications.europa.eu/mdr/authority/data-theme/TRAN", "label": {"mk": "Транспорт", "en": "Transport", "sq": "Transport"}}
-         ]
+             {"value": "AGRI", "label": {"mk": "Земјоделство, шумарство, рибарство и храна", "en": "Agriculture, fisheries, forestry and food", "sq": "Bujqësia, peshkataria, pyjet dhe ushqimi"}},
+             {"value": "ECON", "label": {"mk": "Економија и финансии", "en": "Economy and finance", "sq": "Ekonomi dhe financa"}},
+             {"value": "EDUC", "label": {"mk": "Образование, култура и спорт", "en": "Education, culture and sport", "sq": "Edukimi, kultura dhe sporti"}},
+             {"value": "ENER", "label": {"mk": "Енергија", "en": "Energy", "sq": "Energji"}},
+             {"value": "ENVI", "label": {"mk": "Животна средина", "en": "Environment", "sq": "Mjedis"}},
+             {"value": "GOVE", "label": {"mk": "Влада и јавен сектор", "en": "Government and public sector", "sq": "Qeveria dhe sektori publik"}},
+             {"value": "HEAL", "label": {"mk": "Здравство", "en": "Health", "sq": "Shëndetësor"}},
+             {"value": "INTR", "label": {"mk": "Меѓународни прашања", "en": "International issues", "sq": "Çështje ndërkombëtare"}},
+             {"value": "JUST", "label": {"mk": "Правда, правни системи и јавна безбедност", "en": "Justice, legal system and public safety", "sq": "Drejtësia, sistemi ligjor dhe siguria publike"}},
+             {"value": "REGI", "label": {"mk": "Региони и градови", "en": "Regions and cities", "sq": "Rajonet dhe qytetet"}},
+             {"value": "SOCI", "label": {"mk": "Население и општество", "en": "Population and society", "sq": "Popullsia dhe shoqëria"}},
+             {"value": "TECH", "label": {"mk": "Наука и технологија", "en": "Science and technology", "sq": "Shkencë dhe Teknologji"}},
+             {"value": "TRAN", "label": {"mk": "Транспорт", "en": "Transport", "sq": "Transport"}}
+         ],
+         "help_text": {
+             "en": "Category of the dataset. A dataset may be associated with multiple themes.",
+             "mk": "Категорија на податочниот сет. Податочниот сет може да има повеќе теми/категории.",
+             "sq": "Kategoria e grupit të të dhënave. Një grup i të dhënave mund të shoqërohet me tema të shumëfishta."
+         }
       },
       { "mk_dcatap_comment": "dct:publisher <=================== check this w/profiles.py",
         "field_name": "owner_org",
@@ -93,28 +98,12 @@
             "mk": "Организација",
             "sq": "Оrganizatë"
         },
-        "preset": "dataset_organization"
-      },
-      { "mk_dcatap_comment": "CKAN specific field <=== can be used for dcat:contactPoint if no maintainer ",
-        "field_name": "author",
-        "label": {
-            "en": "Author",
-            "mk": "Автор",
-            "sq": "Autor"
-        },
-        "form_placeholder": "Joe Bloggs"
-      },
-      {  "mk_dcatap_comment": "CKAN specific field <=== can be used for dcat:contactPoint if no maintainer ",
-        "field_name": "author_email",
-        "label": {
-            "en":"Author Email",
-            "mk": "Е-пошта на авторот",
-            "sq": "Autori i Email"
-        },
-        "form_placeholder": "joe@example.com",
-        "display_snippet": "email.html",
-        "display_email_name_field": "author",
-        "validators": "ignore_missing unicode_safe email_validator"
+        "preset": "dataset_organization",
+        "help_text": {
+            "en": "Dataset owner organization.",
+            "mk": "Организација на којашто припаѓа податочниот сет.",
+            "sq": "Organizata pronare e të dhënave."
+        }
       },
       { "mk_dcatap_comment": "dcat:contactPoint",
         "field_name": "maintainer",
@@ -124,7 +113,12 @@
             "sq": "Mirëmbajtësi"
         },
         "validators": "request_data_only_required",
-        "form_placeholder": "Joe Bloggs"
+        "form_placeholder": "Joe Bloggs",
+        "help_text": {
+            "en": "Dataset maintainer name.",
+            "mk": "Името на одржувачот на податочниот сет.",
+            "sq": "Emri i mbajtësit të të dhënave."
+        }
       },
       { "mk_dcatap_comment": "dcat:contactPoint",
         "field_name": "maintainer_email",
@@ -136,7 +130,11 @@
         "form_placeholder": "joe@example.com",
         "display_snippet": "email.html",
         "validators": "ignore_missing unicode_safe email_validator request_data_only_required request_data_only_members_in_owner_org ",
-        "display_email_name_field": "maintainer"
+        "help_text": {
+            "en": "Dataset maintainer email.",
+            "mk": "Е-пошта на одржувачот на податочниот сет.",
+            "sq": "Email i mirëmbajtësit."
+        }
       },
       { "mk_dcatap_comment": "dcat:keyword",
         "field_name": "tag_string",
@@ -150,6 +148,11 @@
             "en": "eg. economy, mental health, government",
             "mk": "пр. економија, ментално здравје, влада",
             "sq": "psh. ekonominë, shëndetin mendor, qeverinë"
+        },
+        "help_text": {
+            "en": "Additional tags for the dataset.",
+            "mk": "Додатни тагови за податочниот сет.",
+            "sq": "Etiketat shtesë për grupin e të dhënave."
         }
       },
       { "mk_dcatap_comment": "dct:accessRights",
@@ -164,7 +167,12 @@
              {"value": "PUBLIC", "label": {"en": "public", "mk": "јавни", "sq": "publik"}},
              {"value": "RESTRICTED", "label": {"en": "restricted", "mk": "ограничени", "sq": "kufizohen"}},
              {"value": "NON_PUBLIC", "label": {"en": "non-public", "mk": "приватни", "sq": "privat"}}
-         ]
+         ],
+         "help_text": {
+            "en": "Indicates whether the dataset is open data, has access restrictions or is not public.",
+            "mk": "Оваа вредност покажува дали податочниот сет содржи јавни (отворени) податоци, има рестрикции за пристап или пак не е јавен.",
+            "sq": "Tregon nëse skedari i të dhënave është i hapur, ka kufizime aksesi ose nuk është publik."
+        }
       },
       { "mk_dcatap_comment": "dct:conformsTo",
         "field_name": "conforms_to",
@@ -193,7 +201,12 @@
             "mk": "Линк",
             "sq": "Lidhje"
         },
-        "display_snippet": "link.html"
+        "display_snippet": "link.html",
+        "help_text": {
+            "en": "Link to a page or document about this dataset.",
+            "mk": "Линк до страница или документ кој содржи информации за овој податочен сет.",
+            "sq": "Lidhje me një faqe ose dokument për këtë grup të dhënash."
+        }
       },
       { "mk_dcatap_comment": "dct:accrualPeriodicity",
         "field_name": "frequency",
@@ -230,6 +243,11 @@
         "form_placeholder": { "en": "Selection list to be inserted <=======================",
                               "mk": "Одберете едно од листата <=======================",
                               "sq": "Zgjidh një nga lista <======================="
+                            },
+        "help_text": {
+                                "en": "Frequency at which the dataset is updated.",
+                                "mk": "Колку често се ажурира овој податочен сет.",
+                                "sq": "Frekuenca në të cilën përditësohet skema e të dhënave."
                             }
       },
        { "mk_dcatap_comment": "dcat:landingPage",
@@ -295,6 +313,11 @@
             "en": "Related resource",
             "mk": "Поврзан ресурс",
             "sq": "Burime të ngjashme"
+        },
+        "help_text": {
+            "en": "A resource related to this dataset. This could be the URI of the resource.",
+            "mk": "Ресурс кој е поврзан со овој податочен сет. Ова може да е URI-то на ресурсот.",
+            "sq": "Një burim që lidhet me këtë grup të dhënash. Kjo mund të jetë URI i burimit."
         }
       },
       { "mk_dcatap_comment": "dct:issued",
@@ -425,7 +448,12 @@
             "sq": "Version"
         },
         "validators": "ignore_missing unicode package_version_validator",
-        "form_placeholder": "1.0"
+        "form_placeholder": "1.0",
+        "help_text": {
+            "en": "Dataset version.",
+            "mk": "Верзијата на податочниот сет.",
+            "sq": "Versionin e dataset."
+        }
       },
       { "mk_dcatap_comment": "adms:versionNotes",
         "field_name": "version_notes",
@@ -438,17 +466,6 @@
                               "mk": "Разликата меѓу оваа и претходната верзија на податочниот сет",
                               "sq": "Dallimi në mes të këtij versioni dhe atij të mëparshëm të grupit të të dhënave"}
       },
-      { "mk_dcatap_comment": "dct:creator",
-        "field_name": "creator",
-        "label": {
-            "en": "Creator",
-            "mk": "Креатор",
-            "sq": "Krijues"
-        },
-        "help_text": {    "en": "Creator of the data set.",
-                          "mk": "Креаторот на податочниот сет.",
-                          "sq": "Krijuesi i setit të të dhënave."}
-      },
       { "mk_dcatap_comment": "dct:isPartOf",
         "field_name": "is_part_of",
         "preset": "repeating_text",
@@ -458,7 +475,9 @@
             "sq": "Është pjesë e"
         },
         "help_text": {    "en": "Dataset which this dataset is a part of",
-                          "mk": "Линк до податочниот сет од кој овој податочен сет е дел"},
+                          "mk": "Линк до податочниот сет од кој овој податочен сет е дел",
+                          "sq": "Lidhu me grupin e të dhënave ku është pjesë e këtij grupi të të dhënave."
+                        },
         "display_snippet": "repeating_text.html"
       },
       { "mk_dcatap_comment": "dct:hasPart",
@@ -471,7 +490,9 @@
             "sq": "Ka pjesë"
         },
         "help_text": {    "en": "Dataset which has part of this dataset",
-                          "mk": "Линк до податочниот сет што има дел од овој податочен сет"},
+                          "mk": "Линк до податочниот сет што има дел од овој податочен сет",
+                          "sq": "Dataset i cili ka pjesë të këtij grupi të të dhënave"
+                        },
         "display_snippet": "repeating_text.html"
       },
       { "mk_dcatap_comment": "dct:license. NB! This is a CKAN field on dataset level. In MK-DCAT-AP, this is only given for catalogue and for distribution  <=== check this with profiles.py",
@@ -485,7 +506,7 @@
         "help_text": {
             "en": "License definitions and additional information can be found at http://opendefinition.org/",
             "mk": "Дефиницијата на лиценца и додатни информации можете да најдете на http://opendefinition.org/",
-            "eq": "Përkufizimet e licencës dhe informatat shtesë mund të gjenden në http://opendefinition.org/"
+            "sq": "Përkufizimet e licencës dhe informatat shtesë mund të gjenden në http://opendefinition.org/"
         }
       }
       ],
@@ -537,7 +558,12 @@
             "mk": "Формат",
             "sq": "Format"
         },
-        "preset": "resource_format_autocomplete"
+        "preset": "resource_format_autocomplete",
+        "help_text": {
+            "en": "The resource format. Some common formats are CSV, JSON, GeoJSON etc.",
+            "mk": "Формат на подтоците на ресурсот. Чести формати се CSV, JSON, GeoJSON и други.",
+            "sq": "Formati i burimeve. Disa formate të zakonshme janë CSV, JSON, GeoJSON etj."
+        }
       },
       {
         "field_name": "schema",
@@ -546,7 +572,12 @@
             "mk": "Шема",
             "sq": "Skemë"
         },
-        "preset": "resource_schema"
+        "preset": "resource_schema",
+        "help_text": {
+            "en": "Resource data schema.",
+            "mk": "Шемата за податоците на ресурсот.",
+            "sq": "Skema e të dhënave të burimeve."
+        }
       },
       {
         "field_name": "validation_options",
@@ -555,7 +586,12 @@
             "mk": "Опции за валидација",
             "sq": "Opsionet e validimit"
         },
-        "preset": "validation_options"
+        "preset": "validation_options",
+        "help_text": {
+            "en": "Additional validation options.",
+            "mk": "Додатни опции за валидација.",
+            "sq": "Opsione të tjera të validimit."
+        }
       },
       {
         "field_name": "validation_status",
