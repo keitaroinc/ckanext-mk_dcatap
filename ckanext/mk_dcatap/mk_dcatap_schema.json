@@ -307,7 +307,11 @@
         "preset": "date",
         "help_text": {    "en": "The date the dataset was issued",
                           "mk": "Датумот кога овој податочен сет бил издаден",
-                          "sq": "Datën që është lëshuar grupi i të dhënave"}
+                          "sq": "Datën që është lëshuar grupi i të dhënave"},
+        "form_attrs": {
+            "data-module": "datepicker",
+            "class": "form-control"
+        }
       },
       { "mk_dcatap_comment": "dct:spatial <==== FIXME ADD translation and spatial and spatial_text",
         "field_name": "spatial_uri",
@@ -407,7 +411,11 @@
             "mk": "Датум на последната промена на податочен сет",
             "sq": "Data e ndryshimit të fundit në setin e të dhënave"
         },
-        "preset": "date"
+        "preset": "date",
+        "form_attrs": {
+            "data-module": "datepicker",
+            "class": "form-control"
+        }
       },
       { "mk_dcatap_comment": "owl:versionInfo",
         "field_name": "version",
