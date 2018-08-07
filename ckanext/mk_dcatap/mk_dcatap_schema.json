@@ -508,8 +508,28 @@
             "mk": "Дефиницијата на лиценца и додатни информации можете да најдете на http://opendefinition.org/",
             "sq": "Përkufizimet e licencës dhe informatat shtesë mund të gjenden në http://opendefinition.org/"
         }
-      }
-      ],
+      },
+      {
+        "mk_dcatap_comment": "dct:org_catalog_enabled",
+        "field_name": "org_catalog_enabled",
+        "label": {
+            "en": "Organization catalog",
+            "mk": "Каталог за организација",
+            "sq": "Katalogu i organizatës"
+        },
+        "preset": "multiple_checkbox",
+        "choices": [
+            {
+                "value": "true",
+                "label": {
+                    "mk": "Означи го овој податочен сет како каталог за организација",
+                    "en": "Mark this dataset as a catalog for organization",
+                    "sq": "Shënoni këtë skedar si katalog për organizim"
+                }
+            }
+        ],
+        "validators": "scheming_multiple_choice scheming_catalog_exists"
+      }],
     "resource_fields": [
       {
         "field_name": "url",
