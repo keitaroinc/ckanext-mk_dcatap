@@ -88,7 +88,7 @@
          "help_text": {
              "en": "Category of the dataset. A dataset may be associated with multiple themes.",
              "mk": "Категорија на податочниот сет. Податочниот сет може да има повеќе теми/категории.",
-             "sq": ""
+             "sq": "Kategoria e mledhjeve të dhënave. Mledhja e të dhënave mund të bëhet në disa pika."
          }
       },
       { "mk_dcatap_comment": "dct:publisher <=================== check this w/profiles.py",
@@ -102,7 +102,7 @@
         "help_text": {
             "en": "Dataset owner organization.",
             "mk": "Организација на којашто припаѓа податочниот сет.",
-            "sq": ""
+            "sq": "Pronari i të dhenave ne organizat."
         }
       },
       { "mk_dcatap_comment": "dcat:contactPoint",
@@ -117,7 +117,7 @@
         "help_text": {
             "en": "Dataset maintainer name.",
             "mk": "Името на одржувачот на податочниот сет.",
-            "sq": ""
+            "sq": "Email-adressa e mirmbajtësit se te dhenave."
         }
       },
       { "mk_dcatap_comment": "dcat:contactPoint",
@@ -152,7 +152,7 @@
         "help_text": {
             "en": "Additional tags for the dataset.",
             "mk": "Додатни тагови за податочниот сет.",
-            "sq": ""
+            "sq": "Gjera shtesë për të dhënat."
         }
       },
       { "mk_dcatap_comment": "dct:accessRights",
@@ -165,13 +165,13 @@
         "preset": "select",
         "choices":[
              {"value": "PUBLIC", "label": {"en": "public", "mk": "јавни", "sq": "publik"}},
-             {"value": "RESTRICTED", "label": {"en": "restricted", "mk": "ограничени", "sq": "kufizohen"}},
-             {"value": "NON_PUBLIC", "label": {"en": "non-public", "mk": "приватни", "sq": "privat"}}
+             {"value": "RESTRICTED", "label": {"en": "restricted", "mk": "ограничени", "sq": "I kufizuar"}},
+             {"value": "NON_PUBLIC", "label": {"en": "non-public", "mk": "приватни", "sq": "jo publik"}}
          ],
          "help_text": {
             "en": "Indicates whether the dataset is open data, has access restrictions or is not public.",
             "mk": "Оваа вредност покажува дали податочниот сет содржи јавни (отворени) податоци, има рестрикции за пристап или пак не е јавен.",
-            "sq": "Tregon nëse skedari i të dhënave është i hapur, ka kufizime aksesi ose nuk është publik."
+            "sq": "Tregon në qoft se të dhënat jan te hapura, akces të kufizuar, ose jan jo publike."
         }
       },
       { "mk_dcatap_comment": "dct:conformsTo",
@@ -205,7 +205,7 @@
         "help_text": {
             "en": "Link to a page or document about this dataset.",
             "mk": "Линк до страница или документ кој содржи информации за овој податочен сет.",
-            "sq": "Lidhje me një faqe ose dokument për këtë grup të dhënash."
+            "sq": "Shëno linkun e web-faqes ose ndonjë dokument për të dhënat."
         }
       },
       { "mk_dcatap_comment": "dct:accrualPeriodicity",
@@ -247,7 +247,7 @@
         "help_text": {
                                 "en": "Frequency at which the dataset is updated.",
                                 "mk": "Колку често се ажурира овој податочен сет.",
-                                "sq": "Frekuenca në të cilën përditësohet skema e të dhënave."
+                                "sq": "Frekuencë cilat të dhena jan te rifeskurara."
                             }
       },
        { "mk_dcatap_comment": "dcat:landingPage",
@@ -305,7 +305,7 @@
             "sq": "Origjina"},
         "help_text": {    "en": "Reference to description of where/how the dataset is produced, and its quality.",
                           "mk": "Референца до описот за тоа од каде и како потекнува овој податочен сет, како и за неговиот квалитет.",
-                          "sq": "Referenca në përshkrimin se ku / si është prodhuar skema e të dhënave, dhe cilësia e tij."}
+                          "sq": "Refero ne përshkrim se ku dhe si te dhënat jan prodhuar dhe kualitetin e tyre."}
       },
       { "mk_dcatap_comment": "dct:relation",
         "field_name": "related_resource",
@@ -317,7 +317,7 @@
         "help_text": {
             "en": "A resource related to this dataset. This could be the URI of the resource.",
             "mk": "Ресурс кој е поврзан со овој податочен сет. Ова може да е URI-то на ресурсот.",
-            "sq": "Një burim që lidhet me këtë grup të dhënash. Kjo mund të jetë URI i burimit."
+            "sq": "Burimi i aferm me te dhenat. Mund te jetë 'URI' i burimeve."
         }
       },
       { "mk_dcatap_comment": "dct:issued",
@@ -452,7 +452,7 @@
         "help_text": {
             "en": "Dataset version.",
             "mk": "Верзијата на податочниот сет.",
-            "sq": "Versionin e dataset."
+            "sq": "Verzioni i të dhenave."
         }
       },
       { "mk_dcatap_comment": "adms:versionNotes",
@@ -515,7 +515,7 @@
         "label": {
             "en": "Organization catalog",
             "mk": "Каталог за организација",
-            "sq": "Katalogu i organizatës"
+            "sq": "Katalogu i organizates"
         },
         "preset": "multiple_checkbox",
         "choices": [
@@ -524,7 +524,7 @@
                 "label": {
                     "en": "Mark this dataset as a catalog for organization",
                     "mk": "Означи го овој податочен сет како каталог за организација",                    
-                    "sq": "Shënoni këtë skedar si katalog për organizim"
+                    "sq": "Nënvizo te dhenat si katalog i organizatës"
                 }
             }
         ],
@@ -582,7 +582,7 @@
         "help_text": {
             "en": "The resource format. Some common formats are CSV, JSON, GeoJSON etc.",
             "mk": "Формат на подтоците на ресурсот. Чести формати се CSV, JSON, GeoJSON и други.",
-            "sq": "Formati i burimeve. Disa formate të zakonshme janë CSV, JSON, GeoJSON etj."
+            "sq": "Burimi i formatit. Disa mund të jen si CSV, JSON, GeoJSON etj."
         }
       },
       {
@@ -596,7 +596,7 @@
         "help_text": {
             "en": "Resource data schema.",
             "mk": "Шемата за податоците на ресурсот.",
-            "sq": "Skema e të dhënave të burimeve."
+            "sq": "Skema e te dhënave."
         }
       },
       {
@@ -610,7 +610,7 @@
         "help_text": {
             "en": "Additional validation options.",
             "mk": "Додатни опции за валидација.",
-            "sq": "Opsione të tjera të validimit."
+            "sq": "Opcione shtes te validuara."
         }
       },
       {
