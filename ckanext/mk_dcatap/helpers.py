@@ -47,3 +47,18 @@ def get_spatial_uri(code):
     if mapping:
         return mapping['spatial_uri']
     return None
+
+
+def get_spatial_location_name(code):
+    """Translates an ISO-3166-2 codes for Macedonia into location names.
+
+    :param str code: The ISO-3166-2 code for the location. This must be a location in Macedonia. See
+        the file ``codes_spatial_mappings.json`` for all available mappings.
+
+    :returns: the name for that location.
+    """
+    mappings = _get_spatial_codes_mappings()
+    mapping = mappings.get(code)
+    if mapping:
+        return mapping['name']
+    return None

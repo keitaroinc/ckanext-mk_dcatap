@@ -2,7 +2,7 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 
 from ckanext.mk_dcatap.validators import request_data_only_members_in_org_validator, request_data_only_required
-from ckanext.mk_dcatap.helpers import get_spatial_uri
+from ckanext.mk_dcatap.helpers import get_spatial_uri, get_spatial_location_name
 
 class Mk_DcatapPlugin(plugins.SingletonPlugin):
     plugins.implements(plugins.IConfigurer)
@@ -24,5 +24,6 @@ class Mk_DcatapPlugin(plugins.SingletonPlugin):
     
     def get_helpers(self):
         return {
-            'mk_dcatap_spatial_uri_from_code': get_spatial_uri
+            'mk_dcatap_spatial_uri_from_code': get_spatial_uri,
+            'mk_dcatap_spatial_name_from_code': get_spatial_location_name,
         }
