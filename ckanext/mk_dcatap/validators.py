@@ -89,5 +89,6 @@ def members_in_org_validator(key, data, errors, context):
 def _get_request_param(param):
     try:
         return request.params.get(param)
-    except TypeError:
+    except (TypeError, RuntimeError):
+        # In case CLI call handle RuntimeError
         return None
