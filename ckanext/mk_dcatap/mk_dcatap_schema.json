@@ -157,6 +157,7 @@
       },
       { "mk_dcatap_comment": "dct:accessRights",
         "field_name": "access_rights",
+        "validators": "ignore_missing",
         "label": {
             "en": "Access Rights",
              "mk": "Права за пристап",
@@ -210,6 +211,7 @@
       },
       { "mk_dcatap_comment": "dct:accrualPeriodicity",
         "field_name": "frequency",
+        "validators": "ignore_missing",
         "label": {
             "en": "Frequency",
             "mk": "Фреквенција",
@@ -338,6 +340,7 @@
       },
       { "mk_dcatap_comment": "dct:spatial <==== FIXME ADD translation and spatial and spatial_text",
         "field_name": "spatial_uri",
+        "validators": "ignore_missing",
         "label": {
             "en": "Location",
             "mk": "Локација",
