@@ -66,7 +66,7 @@ class MacedonianDCATAPProfile(EuropeanDCATAPProfile):
 
         g = self.g
 
-        for prefix, namespace in namespaces.iteritems():
+        for prefix, namespace in namespaces.items():
             g.bind(prefix, namespace)
 
         # -- start
@@ -329,7 +329,7 @@ class MacedonianDCATAPProfile(EuropeanDCATAPProfile):
 
         g = self.g
 
-        for prefix, namespace in namespaces.iteritems():
+        for prefix, namespace in namespaces.items():
             g.bind(prefix, namespace)
 
         g.add((catalog_ref, RDF.type, DCAT.Catalog))
